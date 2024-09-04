@@ -15,4 +15,6 @@
     <fullyQualifiedTypeName name="com.lec.ex3_Square.Square"/>
     <fullyQualifiedTypeName name="java.lang.ArithmeticException"/>
     <fullyQualifiedTypeName name="Exex.Arithmeric"/>
+    <fullyQualifiedTypeName name="com.lec.ex7_customer.TestMain"/>
+    <fullyQualifiedTypeName name="com.lec.ex7_customer.Staff"/>
 </qualifiedTypeNameHistroy>
