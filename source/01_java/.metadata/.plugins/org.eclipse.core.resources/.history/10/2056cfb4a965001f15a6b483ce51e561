@@ -1,0 +1,10 @@
+package com.lec.loop;
+// 짝수를 입력받아 출력
+import java.util.Scanner;
+
+public class Ex10dowhile {
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		
+		}//main
+}//class

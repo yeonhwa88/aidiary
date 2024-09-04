@@ -1,0 +1,8 @@
+package com.lec.ex3_Square;
+
+public class SquareMain {
+	public static void main(String[] args) {
+		Square s1 = new Square();
+		System.out.println("s1의 한변은" + s1.getSide());
+	}
+}

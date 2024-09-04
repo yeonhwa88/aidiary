@@ -1,0 +1,6 @@
+package com.lec.ex4_account;
+// 데이터(인스턴스변수) : accountNo(String), ownerName(String),balance(long)
+// 생성자 new Account("010-777-77", "홍길동"), new Account("010-777-77", "홍길동", 100)
+public class Account {
+
+}

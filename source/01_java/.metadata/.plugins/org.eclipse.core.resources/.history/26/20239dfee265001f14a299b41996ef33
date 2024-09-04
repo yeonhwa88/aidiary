@@ -1,0 +1,16 @@
+package com.lec.Quiz;
+//배열에 담긴 값의 합계, 평균, 최대값, 최소값을 구하는 프로그램을 작성하시오.
+//int[] arr =  { 10, 20, 30, 40, 50, 12, 13}  
+
+public class Quiz2 {
+	public static void main(String[] args) {
+		int[] arr = {10, 20, 30, 40, 50, 12, 13};
+		int tot = 0;
+		for (int idx=0 ; idx<arr.length ; idx++) {
+			System.out.print(arr[idx]);
+			tot += arr[idx]; // 누적
+		
+		}
+	}
+
+}

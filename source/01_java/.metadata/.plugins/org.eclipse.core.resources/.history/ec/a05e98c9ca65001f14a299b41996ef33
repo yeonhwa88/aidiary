@@ -1,0 +1,10 @@
+package com.lec.ex;
+
+public class Ex03 {
+	public static void main(String[] args) {
+		int i = 10; // 원본
+		int j = i;// i를 copy본
+		System.out.printf("i=%d, j%d\n", i, j);
+	}
+
+}

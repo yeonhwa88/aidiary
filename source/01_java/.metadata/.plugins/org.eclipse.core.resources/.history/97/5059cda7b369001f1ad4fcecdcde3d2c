@@ -1,0 +1,29 @@
+package com.lec.ex1_student;
+//데이터 : name(String), kor(int), eng(int) mat(int) tot(int) avg(double)
+//생성자 : new Student("정우성",90,90,90)
+//메소드 : infoprint(), infoString()
+public class Student {
+	//데이터
+	private String name;
+	private int kor;
+	private int eng;
+	private int mat;
+	private int tot;
+	private double avg;
+	//생성자
+	public Student() {}
+	public Student(String name, int kor, int eng, int mat) {
+		this.name = name;
+		this.kor = kor;
+		this.eng = eng;
+		this.mat = mat;
+		tot = kor + eng + mat;
+		avg = tot/3.;
+//		avg = (double)tot/3;
+	}
+	//메소드
+	public void infoprint() {
+	// \t정우성\t국어\t영어\t수학\t총점\t평균
+		System.out.printf("\t%s\t%3d\t%3d\t%3d\t%3d\t%.1f", name,kor,eng,mat,tot,avg);	
+	}
+}

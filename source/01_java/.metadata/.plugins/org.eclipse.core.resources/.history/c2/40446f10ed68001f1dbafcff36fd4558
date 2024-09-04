@@ -1,0 +1,9 @@
+package com.lec.ex1_car;
+// 클래스 : 속성(데이터=인스턴스변수)과 데이터
+// Car myCar = new Car();
+// myCar.method명() 호출
+public class Car {
+	String color;
+	int    cc; //배기량 
+	int    speed;
+}

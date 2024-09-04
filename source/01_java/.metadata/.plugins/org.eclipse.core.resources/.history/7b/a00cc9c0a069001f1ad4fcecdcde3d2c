@@ -1,0 +1,7 @@
+package com.lec.ex5_person;
+
+public class PersonInfo {
+	public static void main(String[] args) {
+		Person person = new Person();
+	}
+}
