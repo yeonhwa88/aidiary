@@ -1,7 +1,0 @@
-package com.lec.ex;
-
-public class Ex02arratprint {
-	public static void main(String[] args) {
-		int [] arr = {0, 0, 0};
-	}
-}
