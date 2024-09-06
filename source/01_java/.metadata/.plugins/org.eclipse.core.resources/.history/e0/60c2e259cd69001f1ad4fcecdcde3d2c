@@ -1,6 +1,0 @@
-package com.lec.ex4_product;
-// 시리얼 넘버 a101 a102 a103 a104
-public class Product {
-	private String modelNumber; // 모델명
-	private
-}

@@ -14,7 +14,7 @@ public class Person {
 		this.charater = charater;
 	}
 	public void intro() {
-		System.err.println("★"+ name + "은" + charater);
+		System.out.println("★"+ name + "은" + charater);
 	}
 	public String getName() {
 		return name;

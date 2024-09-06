@@ -1,7 +1,0 @@
-package com.lec.ex;
-// 배열을 이용하여 학생들(길동, 현식, 땅땅, 슘당, 대갈)의 키를 입력받고, 평균치를 구해보자..
-public class EX05height {
-	public static void main(String[] args) {
-		
-	}
-}
