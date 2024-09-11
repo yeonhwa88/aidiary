@@ -4,7 +4,6 @@ public class Friend {
 	private String name;
 	private String tel;
 	public Friend(String name, String tel) {
-		super();
 		this.name = name;
 		this.tel = tel;
 	}
