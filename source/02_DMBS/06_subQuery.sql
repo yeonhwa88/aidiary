@@ -396,3 +396,120 @@ SELECT DEPTNO, ENAME, SAL
             WHERE SAL > (SELECT MIN(SAL) 
                             FROM EMP
                             WHERE JOB = 'SALESMAN');
+     -- ★ 총 연습문제                           
+-- 14.  이름에 “T”가 있는 사원이 근무하는 부서에서 근무하는 모든 직원의 사원 번호,이름,급여(단 사번 순 출력)
+SELECT EMPNO, ENAME, SAL
+    FROM EMP 
+    WHERE DEPTNO IN (SELECT DEPTNO
+                         FROM EMP
+                         WHERE UPPER(ENAME) LIKE '%T%')
+    ORDER BY EMPNO;
+-- 15. 부서 위치가 Dallas인 모든 종업원에 대해 이름,업무,급여 (INITCAT)
+SELECT ENAME, JOB, SAL
+    FROM EMP 
+    WHERE DEPTNO = (SELECT DEPTNO
+                        FROM DEPT
+                        WHERE INITCAP(LOC) ='Dallas');
+-- 16. EMP 테이블에서 King에게 보고하는 모든 사원의 이름과 급여 --
+SELECT ENAME, SAL
+    FROM EMP
+    WHERE MGR = (SELECT EMPNO
+                    FROM EMP
+                    WHERE UPPER(ENAME) = 'KING');
+-- 17. SALES부서 사원의 이름, 업무
+SELECT ENAME, JOB
+    FROM EMP 
+    WHERE DEPTNO IN (SELECT DEPTNO
+                        FROM DEPT
+                        WHERE DNAME = 'SALES');
+-- 18. 월급이 부서 30의 최저 월급보다 높은 사원의 모든 필드
+SELECT *
+    FROM EMP
+    WHERE SAL > (SELECT MIN(SAL)
+                     FROM EMP
+                     WHERE DEPTNO = 30);
+-- 19.  FORD와 업무도 월급도 같은 사원의 모든 필드
+SELECT *
+    FROM EMP
+    WHERE (JOB,SAL) = (SELECT JOB,SAL
+                        FROM EMP
+                        WHERE UPPER(ENAME) = 'FORD')
+        AND UPPER(ENAME) !='FORD';
+-- 20. 이름이 JONES인 직원의 JOB과 같거나 FORD의 SAL 이상을 받는 사원의 정보를 이름, 업무, 부서번호, 급여
+    -- 단, 업무별 알파벳 순, 월급이 많은 순으로 출력  
+SELECT ENAME, JOB, DEPTNO, SAL
+    FROM EMP
+    WHERE JOB IN (SELECT JOB
+                    FROM EMP
+                    WHERE ENAME = 'JONES')
+        OR SAL >= (SELECT SAL 
+                      FROM EMP
+                      WHERE ENAME = 'FORD')
+    ORDER BY JOB, SAL DESC;
+-- 21. SCOTT 또는 WARD와 월급이 같은 사원의 정보를 이름,업무,급여
+SELECT ENAME, JOB, SAL
+    FROM EMP
+    WHERE SAL IN (SELECT SAL
+                    FROM EMP
+                    WHERE ENAME = 'SCOTT' OR ENAME = 'WARD')
+    AND UPPER(ENAME) NOT IN ('SCOTT','WARD');
+-- 22. CHICAGO에서 근무하는 사원과 같은 업무를 하는 사원들의 이름,업무
+SELECT ENAME, JOB
+    FROM EMP
+    WHERE JOB IN (SELECT JOB 
+                  FROM EMP E, DEPT D
+                  WHERE E.DEPTNO = D.DEPTNO
+                   AND UPPER(LOC) = 'CHICAGO');
+-- 23. 부서 평균 월급보다 월급이 높은 사원을 사번, 이름, 급여, 부서번호
+SELECT EMPNO, ENAME, SAL, E.DEPTNO
+    FROM EMP E ,(SELECT DEPTNO, AVG(SAL) AVG
+                    FROM EMP
+                    GROUP BY DEPTNO) AVGSAL
+    WHERE E.DEPTNO = AVGSAL.DEPTNO
+        AND SAL > AVGSAL.AVG;
+        
+SELECT EMPNO, ENAME, SAL, DEPTNO
+    FROM EMP E
+    WHERE SAL > (SELECT AVG(SAL)
+                    FROM EMP
+                    WHERE DEPTNO = E.DEPTNO);
+-- 24. 업무별로 평균 월급보다 적은 월급을 받는 사원을 부서번호, 이름
+SELECT DEPTNO, ENAME, SAL, JOB, ROUND((SELECT AVG(SAL) FROM EMP WHERE JOB = E.JOB)) AVGSAL
+    FROM EMP E
+    WHERE SAL < ROUND((SELECT AVG(SAL) 
+                    FROM EMP
+                    WHERE JOB = E.JOB));
+                    
+SELECT DEPTNO, ENAME, SAL -- E.JOB
+    FROM EMP E, (SELECT JOB, AVG(SAL) AVGSAL FROM EMP GROUP BY JOB) G
+    WHERE E.JOB = G.JOB
+        AND SAL < AVGSAL;
+        
+SELECT DEPTNO, ENAME, SAL
+    FROM EMP E
+    WHERE SAL > (SELECT AVG(SAL)
+                    FROM EMP
+                    WHERE JOB = E.JOB);
+-- 25. 적어도 한 명 이상으로부터 보고를 받을 수 있는 사원을 업무, 이름, 사번, 부서번호를 출력(단, 부서번호 순으로 오름차순 정렬)
+SELECT JOB, ENAME, EMPNO, DEPTNO
+    FROM EMP
+    WHERE EMPNO IN (SELECT MGR
+                      FROM EMP);
+    -- 서브쿼리 결과 : 7839, NULL, 7782, 7698, 7902, 7566, 7788
+SELECT JOB, ENAME, EMPNO, DEPTNO
+    FROM EMP E
+    WHERE EXISTS (SELECT *
+                    FROM  EMP
+                    WHERE MGR = E.EMPNO);
+-- 26.  말단 사원의 사번, 이름, 업무, 부서번호
+SELECT EMPNO, ENAME, JOB, DEPTNO
+    FROM EMP
+    WHERE EMPNO NOT IN (SELECT MGR
+                          FROM EMP
+                          WHERE MGR IS NOT NULL);
+
+SELECT JOB, ENAME, EMPNO, DEPTNO
+    FROM EMP E
+    WHERE NOT EXISTS (SELECT *
+                    FROM  EMP
+                    WHERE MGR = E.EMPNO);
