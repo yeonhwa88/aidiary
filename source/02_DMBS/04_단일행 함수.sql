@@ -31,11 +31,11 @@ SELECT TRUNC (34.567, -1)
             FROM EMP;
             
 SELECT CEIL (34.567) 
-    FROM DUAL; -- 소수점에서 올림 사용잘안함
+    FROM DUAL; -- 소수점에서 올림
     
 SELECT ROUND (34.567)
     FROM DUAL; -- 소수점에서 반올림
-SELECT RONUD (34.567 ,2)
+SELECT ROUND (34.567, 2)
     FROM DUAL; -- 소수점 두자리에서 반올림
 SELECT ROUND (34.567, -1)
     FROM DUAL; -- 일의자리에서 반올림
@@ -55,9 +55,9 @@ SELECT UPPER('abcABC')
 SELECT LOWER('abcABC')
     FROM DUAL; -- 소문자로
 SELECT INITCAP ('welcome to oracle')
-    FROM DUAL; -- 어절단위로 마눠서 첫 문자만 대문자
+    FROM DUAL; -- 어절단위로 나눠서 첫 문자만 대문자
 SELECT INITCAP ('WELCOME TO ORACLE')
-    FROM DUAL; -- 어절단위로 마눠서 첫 문자만 대문자
+    FROM DUAL; -- 어절단위로 나눠서 첫 문자만 대문자
     -- EX. 이름이 SCOTT인 직원의 모든 필드
     SELECT *
         FROM EMP
@@ -224,7 +224,7 @@ SELECT ENAME, HIREDATE, TRUNC(MONTHS_BETWEEN(SYSDATE, HIREDATE)) MONTHS
 SELECT TRUNC(MONTHS_BETWEEN(TO_DATE('25/03/07 18:00', 'RR/MM/DD HH24:MI'),SYSDATE),2)
     FROM DUAL;
     
--- (4) NEXT_DAY(특정시점, '토') : 특정시점부터 처음 돌아오는 토요일 (사용잘안함)
+-- (4) NEXT_DAY(특정시점, '토') : 특정시점부터 처음 돌아오는 토요일 
 SELECT NEXT_DAY(SYSDATE, '토')
     FROM DUAL;
 
@@ -316,7 +316,7 @@ SELECT *
         
 ALTER SESSION SET NLS_DATE_FORMAT = 'YYYY-MM-DD'; 
 -- (4) TO_NUNBER(문자, '패턴')
-SELECT TO_NUMBER('3,456','9,999')+1  FROM DUAL;
+SELECT TO_NUMBER('3,456','9,999')+1\\  FROM DUAL;
 
 -- 5. NVL (널 일수도 있는 데이터, 널이면 대신할 값) - 매개변수 2개의 타입 일치
     -- EX. 사원이름, 직속상사이름(직속상사가 없으면 CEO로 출력)
