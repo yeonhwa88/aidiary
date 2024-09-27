@@ -332,27 +332,15 @@ SELECT *
     WHERE ENAME LIKE '%L%L%' AND DEPTNO = 30 OR MGR =7782;
 
 --12.	입사일이 81년도인 직원의 사번,사원명, 입사일, 업무, 급여를 출력
-SELECT EMPNO, ENAME, HIREDATE, JOB, SAL
-    FROM EMP
-    WHERE HIREDATE LIKE '81/%';
---13.	입사일이81년이고 업무가 'SALESMAN'이 아닌 직원의 사번, 사원명, 입사일, 업무, 급여를 검색하시오.
-SELECT EMPNO, ENAME, HIREDATE, JOB, SAL
-    FROM EMP
-    WHERE HIREDATE LIKE '81/%'
-        AND JOB != 'SALESMAN';
---14.	사번, 사원명, 입사일, 업무, 급여를 급여가 높은 순으로 정렬하고, 급여가 같으면 입사일이 빠른 사원으로 정렬하시오.
-SELECT EMPNO, ENAME, HIREDATE, JOB, SAL
-    FROM EMP
-    ORDER BY SAL  DESC,HIREDATE;
+
+--13.	입사일이81년이고 업무가 'SALESMAN'이 아닌 직원의 사번, 사원명, 입사일, 
+-- 업무, 급여를 검색하시오.
+
+--14.	사번, 사원명, 입사일, 업무, 급여를 급여가 높은 순으로 정렬하고, 
+-- 급여가 같으면 입사일이 빠른 사원으로 정렬하시오.
+
 --15.	사원명의 세 번째 알파벳이 'N'인 사원의 사번, 사원명을 검색하시오
-SELECT EMPNO, ENAME
-    FROM EMP
-    WHERE ENAME LIKE '__N%';
+
 --16.	사원명에 'A'가 들어간 사원의 사번, 사원명을 출력
-SELECT EMPNO, ENAME
-    FROM EMP
-    WHERE ENAME LIKE '%A%';
+
 --17.	연봉(SAL*12)이 35000 이상인 사번, 사원명, 연봉을 검색 하시오.
-SELECT EMPNO, ENAME, SAL*12
-    FROM EMP
-    WHERE SAL*12 >= 35000;
