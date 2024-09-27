@@ -1,2 +1,0 @@
-SQL문의 종류 :
-1. DML :  Data
