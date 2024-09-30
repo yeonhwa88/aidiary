@@ -12,7 +12,7 @@ public class Ex01_Inputstream {
 		// 2단계 읽는다 (파일 끝까지)
 			while(true){
 				int i = is.read(); // 1byte 씩 읽는다.
-				if(i == -1) break; // 파일의 끝이면 break;
+				if(i == -1) break; // 파일의 끝이면-1 break;
 				System.out.print((char)i); //입력값 확인
 //				System.out.print((char)i+"(" + i +")"); // 아스키코드 값 같이 출력
 			}
