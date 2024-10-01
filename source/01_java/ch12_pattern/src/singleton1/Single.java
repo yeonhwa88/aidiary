@@ -4,9 +4,9 @@ package singleton1;
 public class Single {
 	private int i;
 	private Single() {}
-	private static Single INSTENCE = new Single(); // 많이 쓰는 싱글톤 패턴!!!!
+	private static Single INSTANCE = new Single(); // 많이 쓰는 싱글톤 패턴!!!!
 	public static Single getInstance() {
-		return INSTENCE;
+		return INSTANCE;
 	}
 //	private static Single INSTANCE; //싱글톤패턴 구동코드 기본값 null
 //	public static Single getInstance() {

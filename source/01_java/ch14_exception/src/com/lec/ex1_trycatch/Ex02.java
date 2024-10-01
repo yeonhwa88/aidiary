@@ -27,5 +27,4 @@ public class Ex02 {
 // 예외가 발생하지 않으면 try를 수행하지않음으로 catch도 수행하지않음
 // 예외가 발생하면 try 멈추고 catch로 진행함
 // catch(에러메세지 변수) 감싸야됨
-//
 // getMassage로 오류 내용 메세지 뿌려야됨
