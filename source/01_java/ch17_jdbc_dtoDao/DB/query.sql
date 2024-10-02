@@ -21,6 +21,7 @@ UPDATE DEPT
 DELETE FROM DEPT 
     WHERE DEPTNO = 60;
 ROLLBACK;
+
 -- EMP DAO에 들어갈 QUERY
 -- (1) 사원정보들 가져오는 함수 : getEmpList
 SELECT *
