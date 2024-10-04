@@ -5,7 +5,7 @@ import java.sql.*;
 public class SelectAllOracle {
 	public static void main(String[] args) {
 		String driver = "oracle.jdbc.driver.OracleDriver";
-		String ur1 = "jdbc:oracle:thin:@localhost:1521:xe";
+		String url = "jdbc:oracle:thin:@localhost:1521:xe";
 		String sql = "SELECT * \r\n"
 				+ "    FROM EMP";
 		Connection conn = null;
@@ -13,7 +13,7 @@ public class SelectAllOracle {
 		ResultSet  rs 	= null; // select 결과를 받을 변수 객체
 		try {
 			Class.forName(driver); // 1. 드라이버 로드 (jdk17부터 생략가능)
-			conn = DriverManager.getConnection(ur1, "scott", "tiger"); // 2.DB연결
+			conn = DriverManager.getConnection(url, "scott", "tiger"); // 2.DB연결
 			stmt = conn.createStatement(); // 3. SQL 전송 객체
 			rs	 = stmt.executeQuery(sql); // 4+5. SQL전송 + SQL결과 받기
 			// 6. 원하는 로직 수행

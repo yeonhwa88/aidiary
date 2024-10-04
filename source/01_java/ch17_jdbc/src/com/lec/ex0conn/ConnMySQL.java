@@ -8,12 +8,12 @@ import java.sql.SQLException;
 public class ConnMySQL {
 	public static void main(String[] args) {
 		String driver = "com.mysql.cj.jdbc.Driver";
-		String ur1 = "jdbc:mysql://localhost:3306/dev_user?serverTimezone=UTC";
+		String url = "jdbc:mysql://localhost:3306/dev_user?serverTimezone=UTC";
 		Connection conn = null;
 		try {
 			Class.forName(driver); // 1. 드라이버로드
 			System.out.println("드라이버 로드 성공");
-			conn = DriverManager.getConnection(ur1, "root", "mysql"); // 2. DB연결
+			conn = DriverManager.getConnection(url, "root", "mysql"); // 2. DB연결
 			System.out.println("MYSQL 연결 성공");
 			// 3단계 ~ 6단계
 		} catch (Exception e) {

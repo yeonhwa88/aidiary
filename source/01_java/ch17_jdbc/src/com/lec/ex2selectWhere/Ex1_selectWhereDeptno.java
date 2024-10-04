@@ -7,7 +7,7 @@ import java.sql.*;
 public class Ex1_selectWhereDeptno {
 	public static void main(String[] args) {
 		String driver = "oracle.jdbc.driver.OracleDriver";
-		String ur1 = "jdbc:oracle:thin:@localhost:1521:xe";
+		String url = "jdbc:oracle:thin:@localhost:1521:xe";
 		Connection conn = null;
 		Statement  stmt = null;
 		ResultSet  rs	= null;
@@ -19,7 +19,8 @@ public class Ex1_selectWhereDeptno {
 				+ "    FROM DEPT\r\n"
 				+ "    WHERE DEPTNO = " + deptno;
 		try {
-			conn = DriverManager.getConnection(ur1, "scott", " tiger");// 2. DB연결
+			//Class.forName(driver); 1. 드라이버 로드 (jbk17에서 생략가능)
+			conn = DriverManager.getConnection(url, "scott", " tiger");// 2. DB연결
 			stmt = conn.createStatement(); // 3. SQL문 전송 객체
 			rs   = stmt.executeQuery(sql); // 4+5. SQL전송 + 결과받기
 			if (rs.next()) { //6. 원하는 로직 수행하기
@@ -29,7 +30,7 @@ public class Ex1_selectWhereDeptno {
 				System.out.println("부서명 : " + dname);
 				System.out.println("지역 :" + loc);
 			}else {
-				System.out.println("해당 부서가 존재하지 않습니다.");
+				System.out.println("해당 부서가 존재하지 않습니다."); 
 			}
 		} catch (SQLException e) {
 			System.out.println(e.getMessage());
@@ -41,7 +42,6 @@ public class Ex1_selectWhereDeptno {
 			} catch (Exception e2) {
 				System.out.println(e2.getMessage());
 			}
-		}
-			
+		}		
 	}
 }
