@@ -1,0 +1,33 @@
+﻿#wrap{
+    width:600px;
+    margin:0 auto;
+    border:2px solid gray;
+    padding:10px;
+}
+#footer a::after{
+    text-decoration:none;
+    content : ' - ' attr(href);
+} 
+#content h2{
+    text-align:center;
+    text-decoration:underline;
+}
+#content p:nth-child(2) {
+    font-weight:bold;
+}
+#content p:nth-child(3){
+    padding:10px;
+    font-size:.8em;
+}
+#content p:nth-child(4) {
+    text-align: right;
+    border-bottom: 2px solid gray;
+    padding: 10px;
+    font-size: .8em;
+}
+#footer{
+    text-align:center;
+}
+#footer a {
+    text-decoration: none;
+}

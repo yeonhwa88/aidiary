@@ -1,0 +1,76 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        #wrap{
+            width:750px;
+            margin:0 auto;
+        }
+        #header{
+            text-align:center;
+            border-bottom:1px solid lightgray;
+        }
+        #content{
+            padding:0 10px;
+            text-align:justify; /* 혼합정렬 */
+            border-bottom:1px solid lightgray;
+        }
+        #content p:nth-child(2):first-line,
+        #content p:nth-child(3):first-line { /* 문자선택자(첫번째행) */
+            color:blue;
+            font-weight:bold;
+            font-size:20px;
+        }
+        #content p:nth-child(2):first-letter,
+        #content p:nth-child(3)> span {
+            font-size:2em; /* 원래 크기의 2배 */
+        }
+        #content p:nth-child(2)::selection{
+            background-color:khaki;
+            color:red;
+        }
+        #footer ul{
+            overflow: hidden;
+        }
+        #footer ul li {
+            float: left;
+            list-style: none;
+        }
+        #footer ul li:first-child{
+            margin:20px 10px 20px 20px;
+        }
+        #footer ul li:first-child {
+            margin: 10px 10px 20px 10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <div id="header">
+            <h1>제목이나 회사명</h1>
+        </div>
+        <div id="content">
+            <p>오전에 서쪽 오후에는 강원 경상내륙 많은 비 예상</p>
+            <p>
+                보니 등 달리기다 준 힘에 제련술이나 들린 하다. 
+                아닌 대기는 아무것도 시위다 모른 자연이 불확실하여 흰색을 우파와 막대하다. 심상히 일을 삼국은 있으네 볼이 등장한다. 더하지 혁명적 없다 가방이어서 되자, 차자 양육하야. 하나는 하게 상품화될 그 소리치라, 포기하는 조직을, 그때에 싶다
+                유일으로 있는 구경하는, 시험은, 심기를 오다, 성대함 색은 남부의 오는 그렇다. 사라지게 상하는 중력기다 우리가 견고하다. 부부의 강력한 하는 타라 위하세요. 단행되라 아니 지시를 토실해진 않은 잔인하다 한다. 연구가 등등 않는 데 일과 자연은 임의로 있다.
+            </p>
+            <p>
+                <span>막</span>보니 등 달리기다 준 힘에 제련술이나 들린 하다. 
+                아닌 대기는 아무것도 시위다 모른 자연이 불확실하여 흰색을 우파와 막대하다. 심상히 일을 삼국은 있으네 볼이 등장한다. 더하지 혁명적 없다 가방이어서 되자, 차자 양육하야. 하나는 하게 상품화될 그 소리치라, 포기하는 조직을, 그때에 싶다
+                유일으로 있는 구경하는, 시험은, 심기를 오다, 성대함 색은 남부의 오는 그렇다. 사라지게 상하는 중력기다 우리가 견고하다.부부의 강력한 하는 타라 위하세요. 단행되라 아니 지시를 토실해진 않은 잔인하다 한다. 연구가 등등 않는 데 일과 자연은 임의로 있다.
+            </p>
+        </div>
+        <div id="footer">
+            <ul>
+                <li><img src="ch04/logo.png" alt="회사로고" /></li>
+                <li><img src="ch04/address.png" alt="회사정보" /></li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

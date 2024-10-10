@@ -1,0 +1,53 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        *{ /* 전체선택자 = 페이지의 모든 태그(전체 페이지의 디자인을 초기화 용도) */
+           margin:0; /* 밖여백 (위,오른쪽,아래,왼쪽) 반복되면 하나만 */
+           padding:0; /* 안여백 (위,오른쪽,아래,왼쪽) 반복되면 하나만 */
+           color:saddlebrown;
+        }
+        header, nav, section,footer {
+            width:500px; /*가로사이즈(width를 지정하지 않으면 부모의 width를 다 씀)*/
+            margin:2px auto;
+            border:1px solid gray;
+        }
+        nav ul{ /* 수평으로 하고싶은 태그의 부모 단 */
+            overflow:hidden;
+        }
+        nav ul li{ /* block 타입의 태그를 수평으로 */
+            float:left;
+            list-style:none;
+            padding: 10px 27.5px; /* 안여백 */
+            /* border: 1px solid blue; */
+        }
+        section{ /* 더이상 수평으로 안 할 영역 */
+            clear:both; /* float 속성을 clear.overflow:hidden;을 했으면 생략하기도 함 */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>00 주식회사</h1>
+    </header>
+    <nav>
+        <ul>
+            <li> 회사소개 </li>
+            <li> 서비스소개 </li>
+            <li> 고객센터 </li>
+            <li> 공지사항 </li>
+        </ul>
+    </nav>
+    <section>
+        <p>
+            로렘 입숨은 라틴어를 기반으로 한 가상의 텍스트이며, 의미가 없는 단어와 문장으로 이루어져 있습니다. 그래서 글쓰기나 디자인에 집중할 수 있도록 미완성인 부분을 임시로 채우는 데 유용하게 쓰이며, 주로 "Lorem ipsum dolor sit amet, consectetur adipiscing elit"이라는 문장이 자주 사용됩니다.
+        </p>
+    </section>
+    <footer>
+        <p>서울시 땡땡구 뭐뭐로 12, 201호(아무동, xx빌딩)</p>
+    </footer>
+</body>
+</html>

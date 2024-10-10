@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        input:focus{ /*주로 사용*/
+            background-color:lightyellow;
+            border: 2px solid green;
+            outline:none;
+        }
+        input:enabled{
+            color:green;
+        }
+        input:read-only{ /* read-only 상태 : disabled, redaOnly */
+            color:red;
+        }
+        input:disabled{
+            font-size:0.5em; /*기존의 0.5배*/
+        }
+    </style>
+</head>
+<body>
+    <form>
+        <input type="hidden" name="hiddenparam" value="쉿" />
+        이름 <input type="text" name="name" /><br />
+        아뒤 <input type="text" name="id" /><br />
+        시급 <input type="text" name="sal" value="10000" disabled="disabled" /><br /> <!-- disabled="disabled" focus 불가 화면엔 출력되지만 넘어가진않음 (수정불가) -->
+        생일 <input type="text" name="birth" value="951212" readonly="readonly" /><br /> <!--  readonly="readonly" 수정이 불가한 거 -->
+        <input type="submit" />
+
+    </form>
+
+</body>
+</html>
