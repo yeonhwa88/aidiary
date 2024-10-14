@@ -7,6 +7,7 @@
     margin: 0 auto;
     border: 1px solid gray;
 }
+<<<<<<< HEAD
 #wrap {
     position: relative; /*background_image때문에 잡음*/
 }
@@ -24,6 +25,8 @@
     z-index:-9999;
     opacity:0.3;
 }
+=======
+>>>>>>> cd2c09ae278b54177fa77a12e016064be6ae14d5
 #header {
     height: 100px;
     line-height: 100px;
@@ -33,6 +36,7 @@
     margin: 10px 10px 5px 10px;
 }
 #nav {
+<<<<<<< HEAD
     text-align: center;
     border: 1px solid gray;
     margin: 0 10px 5px 10px;
@@ -43,6 +47,18 @@
 #nav > ul {
     list-style: none;
     height:60px;
+=======
+    height: 130px;
+    text-align: center;
+    border: 1px solid gray;
+    margin: 0 10px 10px 10px;
+}
+#nav p {
+    line-height: 50px;
+}
+#nav ul {
+    list-style: none;
+>>>>>>> cd2c09ae278b54177fa77a12e016064be6ae14d5
     width: 777.5px;
     margin: 0 auto;
 }
@@ -52,8 +68,13 @@
     width: 145.5px;
     margin: 5px;
     overflow: hidden;
+<<<<<<< HEAD
     /*height: 50px;*/
     /*line-height: 50px;*/
+=======
+    height: 50px;
+    line-height: 50px;
+>>>>>>> cd2c09ae278b54177fa77a12e016064be6ae14d5
 }
 #nav ul li a {
     text-decoration: none;
@@ -78,7 +99,11 @@
     width: 627.5px;
     height: 300px;
     text-align: center;
+<<<<<<< HEAD
     margin: 10px 5px 5px 5px;
+=======
+    margin: 5px;
+>>>>>>> cd2c09ae278b54177fa77a12e016064be6ae14d5
 }
 #contain #banner {
     border: 1px solid gray;
@@ -86,7 +111,11 @@
     width: 130px;
     height: 300px;
     text-align: center;
+<<<<<<< HEAD
     margin: 10px 5px 5px 0;
+=======
+    margin: 5px 5px 5px 0;
+>>>>>>> cd2c09ae278b54177fa77a12e016064be6ae14d5
 }
 #footer {
     border: 1px solid gray;
@@ -95,6 +124,7 @@
     line-height: 100px;
     background-color: yellow;
     text-align: center;
+<<<<<<< HEAD
     margin:5px 0 5px 10px;
 }
 /******* 서브메뉴 *********/
@@ -109,4 +139,7 @@
 }
 #nav ul li:hover .submenu{
     display:block;
+=======
+    margin: 5px 0 5px 10px;
+>>>>>>> cd2c09ae278b54177fa77a12e016064be6ae14d5
 }

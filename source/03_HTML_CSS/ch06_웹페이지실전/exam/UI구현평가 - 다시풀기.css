@@ -18,80 +18,6 @@ form{
     margin:0 auto;   
     border:2px solid black;
 }
-<<<<<<< HEAD
-nav #nav_left ul li{
-    float:left;
-    width: 90px;
-    height:30px;
-    line-height:30px;
-    text-align:center;
-    margin:10px;
-}
-nav #nav_right ul li{
-    float:right;
-    width:100px;
-    height:30px;
-    line-height:30px;
-    text-align:center;
-    margin:3px;
-}
-nav #nav_left ul li:first-child{
-    background-color:#fdeada;
-    border:1px solid gray;
-}
-/* content */
-#content {
-    width: 1000px;
-    margin: 0 auto;
-}
-#content #title{
-    padding:70px 0 10px 0;
-    border-bottom:1px solid gray;
-}
-#content #title > div{
-    margin: 0 0 0 5px;
-}
-#content #lnb {
-    width: 200px;
-}
-#content #my_content {
-    width: 600px;
-}
-#content #my_content {
-    border: 1px solid gray;
-    padding: 5px;
-}
-#content #my_content #sub_title {
-    border-top:1px solid gray;
-    height: 300px;
-}
-#content #lnb ul{
-    margin:5px 20px 0 10px;
-    width:100px
-}
-#content #lnb ul li {
-    width: 150px;
-    height: 30px;
-    line-height: 30px;
-    text-align: center;
-    border: 1px solid gray;
-}
-#content #lnb ul li:nth-child(4) {
-    background-color: #fdeada;
-    font-weight:bold;
-}
-
-footer {
-    width: 1000px;
-    background-color: #fdeada;
-    height:30px;
-    line-height:30px;
-    text-align:center;
-    border:1px solid gray;
-    margin:30px 5px 5px 5px;
-}
-
-=======
 nav{
     overflow:hidden;
 }
@@ -169,4 +95,3 @@ footer {
     border-bottom: 1px solid gray;
     background-color:#ef9e74;
 }
->>>>>>> cd2c09ae278b54177fa77a12e016064be6ae14d5
