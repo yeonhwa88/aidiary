@@ -1,172 +1,105 @@
 ﻿/* 초기화 */
 *{
-  margin:0;
-  padding:0;
+  margin: 0;
+  padding: 0;
 }
 a{
-    text-decoration:none;
-    color:black;
-    display:block;
+    text-decoration: none;
+    color: black;
+    display: block;
 }
 li{
-    list-style:none;
+    list-style: none;
+}
+#wrap{
+    width: 1000px;
+    margin:0 auto;
 }
 /* nav */
-form{
-    overflow:hidden;
-    width:1000px;
-    margin:0 auto;   
-    border:2px solid black;
-}
-<<<<<<< HEAD
-nav #nav_left ul li{
-    float:left;
-    width: 90px;
-    height:30px;
-    line-height:30px;
-    text-align:center;
-    margin:10px;
-}
-nav #nav_right ul li{
-    float:right;
-    width:100px;
-    height:30px;
-    line-height:30px;
-    text-align:center;
-    margin:3px;
-}
-nav #nav_left ul li:first-child{
-    background-color:#fdeada;
-    border:1px solid gray;
-}
-/* content */
-#content {
-    width: 1000px;
-    margin: 0 auto;
-}
-#content #title{
-    padding:70px 0 10px 0;
-    border-bottom:1px solid gray;
-}
-#content #title > div{
-    margin: 0 0 0 5px;
-}
-#content #lnb {
-    width: 200px;
-}
-#content #my_content {
-    width: 600px;
-}
-#content #my_content {
-    border: 1px solid gray;
-    padding: 5px;
-}
-#content #my_content #sub_title {
-    border-top:1px solid gray;
-    height: 300px;
-}
-#content #lnb ul{
-    margin:5px 20px 0 10px;
-    width:100px
-}
-#content #lnb ul li {
-    width: 150px;
-    height: 30px;
-    line-height: 30px;
-    text-align: center;
-    border: 1px solid gray;
-}
-#content #lnb ul li:nth-child(4) {
-    background-color: #fdeada;
-    font-weight:bold;
-}
-
-footer {
-    width: 1000px;
-    background-color: #fdeada;
-    height:30px;
-    line-height:30px;
-    text-align:center;
-    border:1px solid gray;
-    margin:30px 5px 5px 5px;
-}
-
-=======
 nav{
     overflow:hidden;
 }
-nav #nav_left, nav #nav_right{
-    float:left;
-}
-nav #nav_left ul{
-    overflow:hidden;
-    width:699px;
-}
-nav #nav_right ul {
-    overflow: hidden;
-    width: 289px;
+nav ul li{
+    width: 85px;
+    margin: 10px;
+    padding: 5px 10px;
+    text-align:center;
 }
 nav #nav_left ul li{
     float: left;
-    padding: 5px 10px;
-    margin: 5px 0 0 10px;
-    font-size:1.2em;
 }
-nav #nav_left ul li:first-child {
-    background-color: #ef9e74;
+nav #nav_right ul li{
+    float: right;
 }
-nav #nav_right ul li {
-    float: left;
-    margin: 10px;
-    text-align:left;
-    font-size:0.9em;
-    padding:5px;
-}
-nav #nav_right ul li:last-child {
-    padding: 5px 10px;
-}
-#title {
-    border-bottom: 1px solid gray;
-    overflow: hidden;
-}
-#title p {
-    font-size: 1.3em;
-    margin: 0 0 0 15px;
-}
-#lnb {
-    width: 250px;
-    float: left;
-}
-#lnb ul li{
-    border:1px solid gray;
-    width:130px;
-    text-align:center;
-    font-size:1.1em;
-    margin: 0 0 0 20px;
-}
-#lnb ul li:nth-child(4){
-    background-color: #ef9e74;
-}
-#my_content {
-    width: 700px;
-    float: left;
-    margin: 0 auto;
-}
-#sub_title table {
-    width: 700px;
+nav #nav_left ul li:first-child{
+    display: block;
     border: 1px solid gray;
-    height: 250px;
-    margin: 10px;
+    background-color: #fdeada;
 }
-footer {
-    width: 1000px;
-    margin: 0 auto;
-    text-align: center;
-    height: 80px;
-    line-height: 80px;
-    border-left: 1px solid gray;
-    border-right: 1px solid gray;
+/* #content */
+#content{
+    overflow: hidden;
+    height:405px;
+}
+#content #title {
     border-bottom: 1px solid gray;
-    background-color:#ef9e74;
+    padding: 10px;
+    margin-bottom: 10px;
 }
->>>>>>> cd2c09ae278b54177fa77a12e016064be6ae14d5
+#content #lnb {
+    float: left;
+    width: 180px;
+    height:200px;
+    margin-left: 15px;
+}
+#content #lnb ul li{
+    line-height: 30px;
+    padding: 2px 30px;
+    border: 1px solid gray;
+    font-size: .9em;
+}
+#content #lnb ul li:nth-child(4){
+    font-weight: bold;
+    background-color:#fdeada;
+}
+#content #my_content{
+    width: 772px;
+    border: 1px solid gray;
+    float:left;
+    margin-left: 30px;
+    margin-bottom: 30px;
+}
+#content #my_content #sub_title{
+    border-bottom: 1px solid gray;
+    height: 30px;
+    line-height: 30px;
+    font-size: .9em;
+    padding-left: 5px;
+}
+#content #my_content #modify table{
+    width: 70%;
+    margin:20px auto;
+}
+#content #my_content #modify table td{
+    padding: 3px;
+}
+#content #my_content #modify table input[type='text'],
+#content #my_content #modify table input[type='email']{
+    width: 90%;
+    height:25px;
+}
+#content #my_content #modify table input[type='submit']{
+    padding: 2px 10px;
+}
+#content #my_content #modify table tr:last-child td{
+    text-align: center;
+}
+/* footre */
+footer{
+    clear:both;
+    background-color:#fdeada;
+    border: 1px solid gray;
+    height: 50px;
+    line-height: 50px;
+    text-align:center;
+}
