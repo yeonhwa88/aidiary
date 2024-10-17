@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
+    <script>
+        let arr = [ "가", "라" ,"나" ,"라" , "다", "라", "마", "라"];
+        copyarr = arr.slice(0, arr.length); //깊은복사
+        // splice(idx, cnt); : 원본배열에 idx번째부터 cnt개 제거
+        // splice(idx, cnt, 대체값); : 배열에 idx번째부터 cnt개 제거하고 그부분에 대체값을 추가 
+        //copyarr.splice(3, 2);
+        //document.write("copyarr : " + copyarr + "<br>" );
+        //copyarr.splice(3, 2, "대체값");
+        //document.write("copyarr : " + copyarr +"<br>" );
+        // copyarr의 0부터 끝까지 "라" 인덱스를 찾아 copyarr.splice(인덱스, 1)
+        for(let idx=0; idx<copyarr.length; idx++){
+            if(copyarr[idx] == "라"){
+                copyarr.splice(idx, 1); // idx번째 값 1개 제거
+                idx--;
+            }
+        }
+        document.write("arr 원본 : " + arr + "<br>")
+        document.write("copyarr 수정본 : " + copyarr + "<br>");
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
