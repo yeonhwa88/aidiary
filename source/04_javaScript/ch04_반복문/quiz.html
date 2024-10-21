@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
+    <script>
+        let cnt = 0; //누적횟수
+        let right = 0; // 점수를 제대로 입력한 횟수
+        let wrong = 0; // 점수를 잘못 입력한 횟수 (null,"", " ", "a", 0보다 작거나 100보다 큰 값);
+        let sum = 0; //점수를 제대로 입력했을 경우 점수 누적할 값 
+        while(confirm("누적할래?")){
+        cnt++;
+        scoreStr = prompt("누적할점수");
+        score = Number(scoreStr);
+        //if(!scoreStr || !scoreStr.trim() || isNaN(score) || 0>score || 100<score){ //flase로 조건
+        //    wrong++;
+        //}else{
+        //    right++;
+        //    sum += score;
+        //}
+        if(!isNaN(score) && score > 0 && score < 100){ //true로 조건
+                right++;
+                sum += score;
+            }else{
+                wrong++;
+            }
+        }
+        
+        document.write(cnt + "번<br>");
+        document.write("잘친거 : " + right + "<br>");
+        document.write("틀린거 : " + wrong + "<br>");
+        document.write("누적 : " +sum);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
