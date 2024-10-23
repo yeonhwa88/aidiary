@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<!-- css script 전부 다 확인가능 파일 실행할때 프로젝트 파일 우측클릭후 run as  > run on server 로 실행-->
+<style>
+	h2{
+		color:blue;
+	}
+</style>
+<script>
+	window.onload = function(){
+		document.querySelector("h2").onclick = function(){
+			this.style.color = "red";
+		}
+	}
+</script>
+<body>
+	<h2>이 파일은 index.html 입니다</h2>
+</body>
+</html>

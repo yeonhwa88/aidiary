@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
+    <title></title>
+    <style>
+        p {
+            text-align: center;
+        }
+    </style>
+    <script>
+        const openConfirm =() => {
+            var child = open("quiz4_confirm.html","","width:600,heigth=600");
+            if(!child){
+                alert("팝업 차단 해제 요망");
+        }
+    }
+    function confirmAgain(){
+        document.getElementById("confrimed").value = 0;
+    }
+    function chk(){
+        var idconfrim = document.getElementById("confrimed");
+        if(idconfrim.value != "1"){
+            alert("Id 중복확인을 하세요")
+            idconfrim.focus();
+            return false;
+        }
+        return true;
+    }
+    </script>
+</head>
+<body>
+    <form onsubmit="return chk()">
+        <input type="hidden" name ="confrimed" id="confrimed" value="0">
+        <p>아이디<input type="text" name="id" id="id" onkeyup="confirmAgain()">
+            <input type="button" value="중복확인" onclick="openConfirm()">
+        </p>
+        <p>
+            <input type="submit" value="회원가입">
+        </p>
+    </form>
+</body>
+</html>

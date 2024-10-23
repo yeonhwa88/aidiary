@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
+    <script>
+        //선택자는 아무거나 다 넣을수있음 
+        window.onload = () =>{
+            //document.querySelector('선택자') : 해당선택자 태그 첫번째 하나만 가져옴
+            //document.querySelectorAll("선택자") : 해당선택자 태그들 배열로 가져옴
+            var header1 = document.querySelector("h1.header");
+            header1.innerHTML ="첫번째만";
+            var head = document.querySelectorAll("h1"); // 배열을 return
+            let col = ["red", "blue"];
+            for(var idx in head){
+                //head[idx].style.backgroundColor = col[idx];
+                head[idx].style = "background-color : " + col[idx];
+            }
+            //여러가지 변경하려면 변수에 받아서 사용하는게 편함
+            document.querySelectorAll('input[name="param"]')[0].value = "선택자 이용 많이 해요";
+        }
+    </script>
+</head>
+<body>
+    <h1 class="header">HEADER1</h1>
+    <h1 class="header">HEADER2</h1>
+    <input type="text" name="param">
+</body>
+</html>

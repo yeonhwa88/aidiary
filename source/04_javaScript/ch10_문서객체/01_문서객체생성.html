@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
+    <script>
+        window.onload = function(){// 윈도우가 온로드 됐을때 펑션을 실행 리스너 함수
+            //방법1 ① h1태그 생성 ② textNode 생성 ③ textNode를 h1에 연결 ④ h1태그를 body에 추가
+            var h1 = document.createElement("h1"); // 1단계 h1 태그만드는법 (createElement)
+            var textNode = document.createTextNode("추가한 h1태그 안의 text") // 2단계 textNode 생성 (createTextNode)
+            h1.appendChild(textNode); // 3단계 h1과 textNode연결 appendChild 
+            document.body.appendChild(h1); // 4단계 h1태그 body에 연결 appendChild
+            //방법2 ① img태그생성 ② src, alt속성변경 ③ img태그를 body에 추가
+            var img = document.createElement("img"); // img태그생성 document.createElement
+            img.setAttribute("src", "ch10_img/red.jpg"); // src, 속성변경 setAttribute
+            img.setAttribute("alt", "체리"); // alt, 속성변경 setAttribute alt속성확인법은 f12눌러서 이미지 클릭해서 코드 확인 
+            document.body.appendChild(img);
+            //방법3 innerHTML을 이용(생성이라기 보다 body에 html을 추가.)
+            document.body.innerHTML += '<h1> 방법3으로 추가 </h1>';
+        }; 
+            
+    </script>
+</head>
+<body>
+    <h1>Text Node</h1>
+    <img src="ch10_img/orange.jpg" alt="오렌지">
+</body>
+</html>
