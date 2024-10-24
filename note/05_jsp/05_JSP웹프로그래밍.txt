@@ -1,0 +1,22 @@
+JSP 웹프로그래밍 :
+JSP 내부 객체
+  - 개발자가 객체를 생성하지 않고 바로 사용할 수 있는 객체가 내부객체.
+  - JSP에서 제공되는 내부객체는 JSP컴터이너에 의해 Servlet으로 변화될 때 자동으로 객체가 생성
+  - 대표적인 내부 객체
+      - request , response, out
+JSP 태그의 개념 이해 
+  - Servlet은 JAVA언어를 이용하여 문서를 작성하고, 출력객체(printWriter객체)를 이용하여 HTML코드를 삽입한다
+  - JSP는 Servlet과 반대로 HTML코드에 JAVA언어를 삽입하여 동적 문서를 만들수 있다
+  - HTML코드안에 JAVA코드를 삽입할수 있는 코드
+      - 지시자 <%@ %> : 페이지 속성 ex.import, page
+      - 주석 <%-- --%>
+      - 선언 <%! %> :  전역변수 및 메소드 선언
+      - 표현식 <%= %> : 결과값 출력 (tag영역에서 사용)
+      - 스크립트릿 <% %> : JAVA 코드
+      - 액션태그 : <jsp.action> </jsp.action> : 표준액션태그 ex.파일연결 및 자바빈 연결
+	        : <c:set> </c:set> : 커스텀액션태그
+JSP 내부 객체
+  - request 객체 : 웹브라우저를 통해 서버에 어떤 정보를 요청하는 것을 request라 하며, 이러한 요청 정보는 request 내부객체가 관리한다
+  - request 객체 매소드
+      - 객체 타입 : javax.servlet.http.HttpServletRequest
+  - getRemoteAdd() : 웹서버에 연결할 클라이언트 IP주소
