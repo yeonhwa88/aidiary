@@ -10,23 +10,30 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.*;
 
+import javax.naming.Context;
+import javax.naming.InitialContext;
+import javax.naming.NamingException;
+import javax.sql.DataSource;
+
 import com.lec.dto.Emp;
 
 public class EmpRepository {
-	private String driver = "oracle.jdbc.driver.OracleDriver";
-	private String url    = "jdbc:oracle:thin:@127.0.0.1:1521:xe";
-	private String uid    = "scott";
-	private String upw    = "tiger";
+
 	private static EmpRepository INSTANCE = new EmpRepository();
 	public static EmpRepository getInstance() {
 		return INSTANCE;
 	}
-	private EmpRepository() {
+	private EmpRepository() {}
+	private Connection getConnection() throws SQLException {
+		Connection conn = null;
 		try {
-			Class.forName(driver);
-		} catch (ClassNotFoundException e) {
+			Context ctx = new InitialContext();
+			DataSource ds = (DataSource) ctx.lookup("java:comp/env/jdbc/Oracle11g");
+			conn = ds.getConnection();
+		} catch (NamingException e) {
 			System.out.println(e.getMessage());
 		}
+		return conn;
 	}
 	//SELECT * FORM EMP 수행결과 return
 	public ArrayList<Emp> empList(){
@@ -36,7 +43,8 @@ public class EmpRepository {
 		ResultSet rs = null;
 		String query = "SELECT * FROM EMP";
 		try {
-			conn = DriverManager.getConnection(url, uid, upw);
+			//conn = DriverManager.getConnection(url, uid, upw);
+			conn = getConnection();
 			stmt = conn.createStatement();
 			rs = stmt.executeQuery(query);
 			while(rs.next()) {
@@ -73,7 +81,7 @@ public class EmpRepository {
 	            + "    FROM EMP E, DEPT D"
 	            + "    WHERE E.DEPTNO LIKE '%' || ? AND E.DEPTNO = D.DEPTNO";
 	      try {
-	         conn = DriverManager.getConnection(url, uid, upw);
+	         conn = getConnection();
 	         pstmt = conn.prepareStatement(query);
 	         pstmt.setString(1, deptnoStr); // ? 채우기 
 	         rs = pstmt.executeQuery();
@@ -112,7 +120,7 @@ public class EmpRepository {
 	      		+ "  FROM EMP E, DEPT D"
 	      		+ "  WHERE E.DEPTNO=D.DEPTNO AND ENAME LIKE '%'||TRIM(UPPER(?))||'%'";
 	      try {
-	         conn = DriverManager.getConnection(url, uid, upw);
+	         conn = getConnection();
 	         pstmt = conn.prepareStatement(query);
 	         pstmt.setString(1, schName); // ? 채우기 
 	         rs = pstmt.executeQuery();
