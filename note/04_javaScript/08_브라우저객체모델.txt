@@ -1,31 +1,10 @@
-브라우저 객체 모델 :
-window 객체 :
-<script>
-        var output = '';
-        var i = 0;
-        for (var key in window) {
-            output += (++i)+' ★ ' + key + ':' + window[key] + '<br>';
-        }
-        document.write(output);
-</script>
-  위의 예제에서 보듯 window 객체는 이렇게 많은 속성과 메서드가 있으므로 자주 사용되는 속성과 메서드만 본다
-  winsow 객체는 브라우저 기반 자바스크립트는 최상위 객체. 
-  지금까지 함수처럼 사용한 alert(), prompt()함수 모두 window객체의 메서드
-  var 키워드로 선언한 일반 변수도 모두 window 객체의 속성이된다
-window 객체 생성
+window 객체 : window 객체는 브라우저 기반 자바스크립트는 최상위 객체. 
+  지금까지 함수처럼 사용한 alert(), prompt()함수 모두 window객체의 메서드 var 키워드로 선언한 일반 변수도 모두 window 객체의 속성이된다
 window객체의 윈도우 생성 메서드 : open(URL, name, features, replace) : 새로운 window 객체를 생성합니다.
     - window 객체의 open()메서드의 매개변수는 모두 옵션
     - URL : 열고자 하는 HTML 페이지의 url
     - name : 윈도우 간 통신하는데 사용하는 윈도우 이름 또는 target속성
     - features : 윈도우 출력 모양을 지정하는 옵션
-window 형태 옵션 :
-    - height : 새 window의 높이
-    - width : 새 window의 너비
-    - location : 주소 입력창의 유무
-    - menubar : 메뉴의 유무
-    - resizable : 화면 크기 조절 가능 여부
-    - status : 상태 표시줄의 유무
-    - toolbar : 상태 표시줄의 유무
 location 객체 : 브라우저의 주소 표지줄과 관련된 객체
     - href : 문서의 URL주소
     - host : 호스트 이름과 포스 번호 
@@ -44,4 +23,3 @@ location 객체는 페이지를 이동할 때 많이 사용
  - location.href = ‘http://hanb.co.kr’;
  - location.assign(‘http://hanb.co.kr’); // 뒤로가기 사용 가능
  - location.replace(‘http://hanb.co.kr’); // 뒤로가기 사용 불가
-
