@@ -11,6 +11,25 @@
 	<link href ="${conPath }/css/ex.css" rel="stylesheet">
 </head>
 <body>
+	<!-- 가입후 리스트 페이지로 올 경우 가입 메세지 insertMsg memberExistentMsg insertResult 출력 -->
+	<c:if test="${not empty insertMsg }">
+		<script>alert('2방법 .${insertMsg }');</script>
+	</c:if>
+	<c:if test="${not empty memberExistentMsg }">
+		<script>
+			alert("${memberExistentMsg }");
+			// history.back(); 
+			history.go(-1);
+		</script>
+	</c:if>
+	<c:set var="SUCCESS" value="1"/>
+	<c:set var="FAIL" value="0"/>
+	<c:if test="${insertResult eq SUCCESS }">
+		<script> alert("1방법 . 가입성공");</script>
+	</c:if>
+	<c:if test="${insertResult eq FAIL }">
+		<script> alert("1방법 . 가입실패");</script>
+	</c:if>
 	<table>
 		<tr>
 			<th>순번</th><th>ID</th><th>PW</th><th>이름</th><th>생일</th><th>가입일</th>
@@ -38,8 +57,8 @@
 		
 	</table>
 				<p>
-					<button onclick="location.href=${conPath}/memberJoinView.do">회원가입버튼</button>			
-					<button onclick="location.href=${conPath }/">프로젝트 실행</button>
+					<button onclick="location.href='${conPath}/memberJoin.do'">회원가입버튼</button> <%-- 사이트 이동 location.href --%>	
+					<button onclick="location.href='${conPath }/'">프로젝트 실행</button>
 				</p>
 </body>
 </html>
