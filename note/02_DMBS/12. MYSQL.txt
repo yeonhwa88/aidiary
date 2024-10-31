@@ -7,9 +7,9 @@ ORACLE 과 MY SQL 차이점
 (2) DDL (제약조건 fk, 시퀀스 없음)
  - MYSQL 자료형
     - Tinyint, smallint, int, integer, numeric, float(m,d), double,  char, varchar, BLOB, date(날짜), datetime(날짜/시간), timestamp, time(시간)
- - foreign key : ORACLE과 사용법은 같지만 하단에 작성.
- - 시퀀스
-     - primary key auto_increment : 자동 증가되는 PK(반드시 INT형)
+    - foreign key : ORACLE과 사용법은 같지만 하단에 작성.
+ - 시퀀스 
+ - primary key auto_increment : 자동 증가되는 PK(반드시 INT형)
 (3) DML (outer join, and=&&, or==||, 일부단일행함수, rownum이 없어 top-n구문이 다름)
  - NVL
     - ifnull(널일수도 있는 필드, 널 대체 값) :매개변수 2개의 타입은 일치하지 않아도 가능
