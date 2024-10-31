@@ -1,11 +1,8 @@
-SQL문의 종류 :
 1. DML : 데이터 검색, 수정, 삭제 등.
 (1) INSERT : 데이터베이스 객체에 데이터를 입력
-     1) INSERT INTO 테이블명 VALUES (컬럼값..) ;
-     2) INSERT INTO 테이블명 (컬럼명 ..) VALUES (컬럼값 ...) ;
+     1) INSERT INTO 테이블명 VALUES (컬럼값..) ; 2) INSERT INTO 테이블명 (컬럼명 ..) VALUES (컬럼값 ...) ;
 (2) DELECT : 데이터베이스 객체에 데이터를 삭제
-     1) DELETE FROM 테이블명;
-     2) DELETE FROM 테이블명 WHERE 조건;
+     1) DELETE FROM 테이블명; 2) DELETE FROM 테이블명 WHERE 조건;
 (3) UPDATE : 기존에 존재하는 데이터베이스 객체 안의 데이터
      1) UPDATE 테이블명 SET 컬럼명1 = 컬럼값1, 컬럼명2 = 컬럼값2 ...;
 (4) SELECT : 데이터베이스 객체로부터 데이터를 검색
@@ -22,14 +19,10 @@ SQL문의 종류 :
 3. DCL : 데이터베이스 사용자의 권한 제어
 (1) GRANT : 데이터베이스 객체에 권한 부여
 (2) REVOKE : 이미 부여된 데이터베이스 객체의 권한을 취소
-(3) CREATE USER : 사용자 생성
-     1) CREATE USER 계정 IDENTIFIED BY 비번 ;
-(4) DROP USER : 사용자 제거
-     1) DROP USER 계정 CASCADE;  (삭제는 로그아웃 상태에만 가능)
-(5) GRANT : 권한 부여
-     1) GRANT 권한 TO 계정;
-(6) REVOKE : 권한 박탈
-     1) REVOKE 권한 TO 계정;
+(3) CREATE USER : 사용자 생성 - CREATE USER 계정 IDENTIFIED BY 비번 ;
+(4) DROP USER : 사용자 제거 - DROP USER 계정 CASCADE;  (삭제는 로그아웃 상태에만 가능)
+(5) GRANT : 권한 부여 - 1) GRANT 권한 TO 계정;
+(6) REVOKE : 권한 박탈 - 1) REVOKE 권한 TO 계정;
 ★ 제약조건 ★
 NOT NULL : 필드에 NULL값을 포함하지 않음
 UNIQUE : 모든 행에 대해 유일해야 하는 값
