@@ -22,4 +22,8 @@ location 객체는 페이지를 이동할 때 많이 사용
  - location = ‘http://hanb.co.kr’;
  - location.href = ‘http://hanb.co.kr’;
  - location.assign(‘http://hanb.co.kr’); // 뒤로가기 사용 가능
+<<<<<<< HEAD
  - location.replace(‘http://hanb.co.kr’); // 뒤로가기 사용 불가
+=======
+ - location.replace(‘http://hanb.co.kr’); // 뒤로가기 사용 불가
+>>>>>>> 8cb20b216a796eca8c2d01141127b81eb72695f0

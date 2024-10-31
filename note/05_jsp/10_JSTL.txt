@@ -22,4 +22,8 @@ fmt : 국제화/형식화 액션. 국제화/형식화 기능을 제공해주는 
    2-2 <fmt:formatDate>
   - <fmt:formatDate var=”변수명” value=”값” type=”타입” dateStyle=”값” timeStyle=”값” pattern=”패턴” scope=”범위”>
       - value 속성에는 날짜 또는 시간을 입력 type 속성으로 날짜인지 시간인지 또는 날짜와 시간 둘다 포함한 타입인지를 지정 dateStyle 날짜의 스타일을 지정.  type 속성이 date 또는 both일 때만 적용 timeStyle 시간의 스타일을 지정.  
+<<<<<<< HEAD
 	type 속성이 date 또는 both일 때만 적용  
+=======
+	type 속성이 date 또는 both일 때만 적용  
+>>>>>>> 8cb20b216a796eca8c2d01141127b81eb72695f0

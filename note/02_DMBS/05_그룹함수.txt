@@ -18,4 +18,8 @@
 	GROUP BY 컬럼명;
 (3) 합계, 평균, 최대값이나 최소값 등을 어떤 칼럼을 기준으로 그 칼럼의 값 별로 보고자 할 때 GROUP BY 절 뒤에 해당 칼럼을 기술.
 (4) GROUP BY 절을 사용할 때 주의할 점은 GROUP BY 절 다음에는 컬럼의 별칭을 사용할 수 없고, 반드시 컬럼명을 기술해야 한다.
+<<<<<<< HEAD:note/02_DMBS/05_그룹함수.txt
 3. HAVING : SELECT 절에 조건을 사용하여 결과를 제한할 때는 WHERE 절을 사용하지만 그룹의 결과를 제한할 때에는 HAVING절을 사용. HAVING 절은 GROUP BY절 앞에 기술 가능하지만, GROUP BY 절 다음에 기술하는 것이 논리적으로 권장되고있다.
+=======
+3. HAVING : SELECT 절에 조건을 사용하여 결과를 제한할 때는 WHERE 절을 사용하지만 그룹의 결과를 제한할 때에는 HAVING절을 사용. HAVING 절은 GROUP BY절 앞에 기술 가능하지만, GROUP BY 절 다음에 기술하는 것이 논리적으로 권장되고있다.
+>>>>>>> 8cb20b216a796eca8c2d01141127b81eb72695f0:note/02_DMBS/05. 그룹함수.txt

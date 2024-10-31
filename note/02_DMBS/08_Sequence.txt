@@ -10,4 +10,8 @@ MAXVALUE 	-- 최대값
 MINVALUE 	-- 최소값
 NOCACHE 	-- 시퀀스값 생성 방지
 NOCYCLE  	-- 만들어진 시퀀스 수가 가득 찼을때 처음으로 돌아가지 못하게 방지.
+<<<<<<< HEAD:note/02_DMBS/08_Sequence.txt
 DROP SEQUENCE 시퀀스이름 : 시퀀스 삭제
+=======
+DROP SEQUENCE 시퀀스이름 : 시퀀스 삭제
+>>>>>>> 8cb20b216a796eca8c2d01141127b81eb72695f0:note/02_DMBS/08. Sequence.txt

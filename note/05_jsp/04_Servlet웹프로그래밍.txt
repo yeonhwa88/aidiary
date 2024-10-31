@@ -20,4 +20,9 @@ Servlet 라이프사이클(생명주기) : 언어를 할 때 라이프사이클�
 2. Servlet의 라이프사이클 : 
 	- 실행 시기 : Servlet 객체 생성 (최초 한번) - 최초요청, 컨테이너 시작 : init() 호출(최초 한번)
 	- 모든 요청과 응답 : Service(), doGet(), doPost() 호출 (요청시 service가 있으면 doGet이나 doPost 실행하지 않고 servise가 실행 통상적으론 servise를 사용하지않고 doGet이나 doPost 사용 ) 
+<<<<<<< HEAD
 	- 컨테이너 종료/어플리케이션종료 : destroy() 호출 (마지막한번 자원헤제 : Servlet수정, 서버재가동 등)
+=======
+	- 컨테이너 종료/어플리케이션종료 : destroy() 호출 (마지막한번 자원헤제 : Servlet수정, 서버재가동 등)
+				
+>>>>>>> 8cb20b216a796eca8c2d01141127b81eb72695f0
