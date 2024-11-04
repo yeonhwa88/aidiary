@@ -27,7 +27,7 @@ INSERT INTO PERSON ( ID, NAME, TEL, ADDRESS, BIRTH, MEMO)
 -- DAO 들어갈  QUERY
 -- 1. LIST (PAGING 없이) : public ArrayList<Person> getPersonList()
 SELECT *
-    FROM PERSON;
+    FROM     PERSON;
 -- 1. LIST (PAGING 추가) : public ArrayList<Person> getPersonList(int startRow, int endRow) : 몇등 ~ 몇등
 SELECT *
     FROM (SELECT ROWNUM RN, A.* 
