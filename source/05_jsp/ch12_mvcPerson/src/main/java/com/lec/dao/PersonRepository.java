@@ -63,7 +63,7 @@ public class PersonRepository {
 				Date birth = rs.getDate("birth");
 				String memo = rs.getString("memo");
 				Timestamp rdate = rs.getTimestamp("rdate");
-				persons.add(new Person(id, name, tel, address, birth, memo, null));
+				persons.add(new Person(id, name, tel, address, birth, memo, rdate));
 			}
 		} catch (SQLException e) {
 			System.out.println(e.getMessage());
@@ -102,7 +102,7 @@ public class PersonRepository {
 				Date birth = rs.getDate("birth");
 				String memo = rs.getString("memo");
 				Timestamp rdate = rs.getTimestamp("rdate");
-				persons.add(new Person(id, name, tel, address, birth, memo, null));
+				persons.add(new Person(id, name, tel, address, birth, memo, rdate));
 			}
 		} catch (SQLException e) {
 			System.out.println(e.getMessage());
@@ -177,7 +177,7 @@ public class PersonRepository {
 				Date birth = rs.getDate("birth");
 				String memo = rs.getString("memo");
 				Timestamp rdate = rs.getTimestamp("rdate");
-				person=new Person(id, name, tel, address, birth, memo, null);
+				person=new Person(id, name, tel, address, birth, memo, rdate);
 			}
 		} catch (SQLException e) {
 			System.out.println(e.getMessage());

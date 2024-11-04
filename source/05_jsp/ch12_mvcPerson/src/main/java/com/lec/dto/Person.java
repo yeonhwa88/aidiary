@@ -1,6 +1,6 @@
 package com.lec.dto;
 
-import java.security.Timestamp;
+import java.sql.Timestamp;
 import java.sql.Date;
 
 import lombok.AllArgsConstructor;

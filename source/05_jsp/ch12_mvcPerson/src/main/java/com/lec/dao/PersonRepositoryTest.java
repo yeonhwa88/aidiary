@@ -9,7 +9,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 
 import com.lec.dto.Person;
-
+@WebServlet("/test")
 public class PersonRepositoryTest extends HttpServlet {
 	private static final long serialVersionUID = 1L;
    
