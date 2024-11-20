@@ -1,0 +1,17 @@
+모듈 로드 방법 :
+ - import A - A 모듈을 로드
+ - import A as B - A모듈을 B이름으로 가져옴
+ - from A import B - A 모듈 안의 B함수(클래스|변수)
+ - from A import B as C - A모듈안의 B함수를 C이름으로 가져옴
+ - from A import B - A패키지안의 B모듈을 가져옴
+ - from A.B import C - A패키지안의 B모듈안의 C함수를 가져옴
+ - from A import B as C - A패키지안의 B모듈을 C이름으로 가져옴
+ - from A.B import C as D - A패키지안의 B모듈안의 C함수를 D이름으로 가져옴
+패키지 :
+ - 패키지 폴더 지정할 때 :
+    import sys
+    sys.path.append(r'D:\ai\source\pylib')
+    sys.path
+ - 패키지 설치 : pip install 패키지명[==버전] / conda install 패키지명[==버전]
+ - 패키지 확인 : pip show 패키지명            / conda list 패키지명
+ - 패키지 삭제 : pip uninstall 패키지명       / conda remove 패키지명
