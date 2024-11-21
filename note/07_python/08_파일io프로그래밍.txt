@@ -1,7 +1,19 @@
+<<<<<<< HEAD
+w 또는 wt : 기존의 파일이 있는 경우 덮어쓰기로 쓰기 모드, 파일이 없는 경우 생성하여 쓰기
+a 또는 at : 기존의 파일이 있는 경우 append(끝에 추가), 파일이 없는경우 생성하여 쓰기
+쓰기 모드는 폴더가 없는 경우 예외 발생
+r 또는 rt : 기존의 파일을 읽는 경우, 파일이 없는 경우 예외발생
+open() : 파일 객체를 반환
+text 파일 io
+with open('파일경로','모드',encoding='인코딩방식') as f:
+	list변수 = f.readlines() 또는 f.wirterows(list변수)
+피클을 이용한 파일 io (객체를 파일에 io) 바리너리 모드로 열어야 함 : rb(읽기), wb(쓰기)
+=======
 text 파일 io
 with open('파일경로','모드',encoding='인코딩방식') as f:
 	list변수 = f.readlines() 또는 f.wirterows(list변수)
 피클을 이용한 파일 io (객체를 파일에 io)
+>>>>>>> 69b5815e1e3dfb8b4120e1612372787970063d90
 with open('파일경로','wb / rb / ab') as f:
 	객체리스트변수 = pickle.load(f) - read
 	pickle.dump(객체리스트변수, f) - write
