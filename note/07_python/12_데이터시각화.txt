@@ -1,0 +1,35 @@
+시각화 라이브러리 : matplotlib, seaborn, folium(지도시각화)
+matplotlib : 파이썬에서 가장 많이 사용하는 시각화 라이브러리. 판다스 내부에 포함
+plt.plot(x, y, fmt)
+df.plot(x=None, y=None, kind='line', figsize=None, title=None, grid=None, xlim, ylim,...)
+kind : line(기본값), scatter(점도표), bar, barh, box, density, pie....
+figsize : tuple(인치단위)
+xlim, ylim : list/tuple
+- 그래프 그리기
+fill(), fill_between(), scatter()
+bar(), barh(), axvline(), axhline()
+hist(히스토그램 : 도수분포표를 그래프화), boxplot(분포를 모름), violinplot()
+matplotlib.pyplot.plot() : 선그래프
+plt.scatter() : 산점도
+subplots() : 서브플롯 추가
+- 그래프 커스터마이징
+1) linestyle, linewidth, color, marker...
+2) text(), annotate()
+- 축공유
+ax2 = ax1.twinx()  ax1과 x축을 공유하는 ax2
+ax3 = ax1.twiny()  ax1과 y축을 공유하는 ax3
+- plot 스타일 지정  (plt.rc())
+plt.rc('font', family='Malgun Gothic') # 윈도우즈 <br>
+plt.rc('axes', unicode_minus=False) # 축의 - 깨짐 방지
+seaborn : matplotlib 기반으로 다양한 색, 테마, 차트 기능과 groupby 기능을 추가한 라이브러리
+- 미적속성설정 : sns.set(style, context, palette, rc)
+- 그래프 함수
+① 관계형그래프 : scatterplot, lineplot -> relplot(서브플롯)
+② 범주형그래프
+   stripplot, swarmplot, barplot, barhplot
+   countplot, pointplot, boxplot, violinplot
+   boxenplot => catplot(서브플롯)
+③ 쌍관계 그래프 : pairplot
+④ 밀도그래프 : histplot, displot
+⑤ 회귀그래프 : regplot => lmplot(서브플롯)
+- 다중그래프를 위한 FacetGrid
