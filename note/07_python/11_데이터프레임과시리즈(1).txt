@@ -1,0 +1,29 @@
+- Series : Pandas의 1차원 데이터 구조. 인덱스(index)와 값(values)로 구성됨. 하나의 데이터 타입(숫자, 문자열 등)을 가짐.
+리스트, 딕셔너리, 배열 등을 기반으로 생성 가능.  딕셔너리와 비슷하지만 순서를 유지. 인덱싱(indexing)과 슬라이싱(slicing) 지원.
+- DataFrame : Pandas의 2차원 데이터 구조 (표 형태). 행(row)과 열(column)로 구성됨. 각 열은 Series 객체로 표현.
+다양한 데이터 타입을 열별로 가질 수 있음. 행과 열을 인덱싱하여 접근 가능. NumPy 배열과 유사한 연산 지원.
+-주요 함수들 : 
+head() / tail(): 데이터 앞/뒤 기본 5행 제공.
+info(), describe(): 요약 정보 제공.
+sort_index(), sort_values(by=[정렬기준이 될 열이름들], ascending=T/F) : 인덱스 axis=0(행) axis=1(열) / 값으로 정렬 (ascending=False 내림차순정렬)
+df.columns : 열이름
+df.index : 행이름
+loc[]: 행이름과 열이름으로 데이터프레임의 부분 데이터 조회 / iloc[] : 행번호, 열번호으로 데이터프레임의 부분 데이터 조회
+inplace=True : 할당과 같은 역할 
+set_index() : 인덱스로 설정
+reset_index() : 인덱스를 컬럼에 편입시키기 / (drop=True) : 기존 index를 제거 후 초기화 
+pd.options.display.max_rows = 150 # ... 된 행과 열을 전부 다 보이게 풀어주는 (커널 재시작시 원상 복귀)
+df.merge(기준이될df) :  how = 'inner'(기본값) 내부병합  / 'left' 왼쪽 데이터 프레임값 / 'right' / 'outer'  / 인덱스를 기준으로 병합할 경우, left_index와 right_index 모두 기입해야 함
+df.concat([df1, df2] axis) : axis=0 기본값 위아래로 연결 / axis=1 좌우로 연결
+- 기초통계분석
+count : NaN(결측치)을 제외한 갯수 / min : 최소값 / max : 최대값 / sum : 합계 / cumsum : 누적합 / cumprod : 누적곱
+mean : 평균 / median : 중위수 / std : 표준편차 / var : 분산 / corr : 상관관계 (계수) / cov : 공분산 (공분산 : (x1-x평균)*(x2-x2평균)들의 합을 n-1을 나눈값)
+quantile : 분위수 (0사분위수, 1사분위수, 중위수, 3사분위수, 4사분위수) : 이상치 구하는 용도
+	사분위수 : Q1(1사분위수 25%) - Q2(중위수) - Q3(3사분위수 75%)
+	IQR : Q3-Q1
+	일반적으로 이상치 판단 기준 : 
+		Q3 + 1.5*IQR보다 큰 값은 이상치로 판단
+		Q1 - 1.5*IQR보다 작은 값은 이상치로 판단
+describe : 요약통계량 (통계량 모두 추출하는 함수) (기본값 : 숫자열에서 요약 통계량) / (include: 매개변수를 통해서 요약통계량을 출력할 열의 타입을 지정 / exclude :  매개변수를 이용해서 제외할 타입 지정 / include='all' : 데이터프레임의 모든 열의 요약 통계량 출력)
+		 (interpolation='nearest' 정확한 구간의 값이 없을경우 가까운 값 출력 / 'midpoint' : 정확한 구간의 값이 없을 경우 환산해서 출력) 
+df[].unique() :  특정 컬럼의 고유 값들의 종류 / df[].value_counts()  : 고유값들의 빈도

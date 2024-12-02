@@ -1,0 +1,23 @@
+그룹화 방법1 : df.groupby(by=[그룹핑할열])[함수적용해서출력할열들].기초통계함수() 
+그룹화 방법2 : df.pivot_table(index='그룹화할 필드들',values=['함수적용해서 출력할 열들'],aggfunc='함수명'(기본값:mean))
+레이블(원핫인코딩)을 지원하는 패키지 이용
+	from sklearn.preprocessing import LabelEncoder
+	le = LabelEncoder()  객체
+	iris['target'] = le.fit_transform(iris.Species)
+melt를 이용한 언피벗팅(와이드포맷 => 롱포맷)
+	import statsmodels.api as sm
+	airquality = sm.datasets.get_rdataset('airquality', package='datasets').data
+pivot_table를 이용한 피벗팅(롱포맷 => 와이드포맷)
+	airquality2 = airquality_melted.pivot_table(index=['Month','Day'],columns=['variable'],values=['value'])
+pivot_table(), pivot() 함수의 차이
+pivot() : 단순 데이터 재구조화 / 중복 값이 있으면 오류 발생 / 집계 함수 지원하지 않음 / 기본적으로 NaN유지 / 고유한 값을 가지고있는 데이터를 간단히 구조 변경
+pivot_table() : 데이터 요약 및 재구조화 / 중복 데이터 집계합수(aggfunc)로 처리 / mean, sum등 다양한 함수 사용가능 / fill_value로 결측치 대체가능 / 중복된 데이터가 있거나 요약이 필요한 경우 사용
+apply(func, axis) : 데이터프레임이나 시리즈 모두 적용 가능
+applymap(func) : 각 요소별로 적용(데이터 프레임에서만 가능)
+map(func) : 각 요소별로 적용 (1차원 시리즈에서만 가능)
+df.fillna(결측치를 어떤 값으로 바꿈) : / df.fillna(0) 0으로 대체 / df.fillna('ffill) 이전행값으로 대체 / df.fillna(method='bfill') 다음행의 값으로 대체 /  values = {'A':99, 'B':98, 'C':97, 'D':96} df.fillna(value=values) 특정 대체값으로 바꿈 / df.fillna(value=df.mean(axis=0)) 열별 평균으로 바꿈
+ (결측치는 drop하거나, 평균값대체, 최빈값대체, 중위수대체, 그룹별 평균값, 이전값 대체, 다음값 대체, 회귀식결과값으로 대체)
+replace(to_value, new_value, inplace=T/F) : to_value를 new_value로 변경 , 정규표현식을 이용 가능
+where(조건) : 조건이 만족하는 요소는 그대로 출력하고, 만족하지 않는 요소는 결측치로 출력
+mask(조건)  : where의 반대
+dropna() : 결측치가 있는 데이터 누락(행기준, 열기준) / df.dropna(how='all') 모두 결측치인 행만 삭제 / df.dropna(axis=1) 결측치가 하나라도 있는 열을 모두 삭제
