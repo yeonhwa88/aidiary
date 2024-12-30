@@ -1,0 +1,12 @@
+scale을 맞추는 방법  모든 데이터를 일정 범위 내로 조정
+ - normalization(정규화)  데이터의 최대값을 1, 최소값을 0으로 조정
+                         x - Xmin
+     normalization = ────────────────
+                        Xmax - Xmin
+             위의 식을 써도 되지만 라이브러리를 주로 씀(sklearn.preprocessing.MinMaxScale 이용)
+ 
+ - standardization(표준화)  데이터의 평균을 0, 표준편차를 1로 조정
+                        x - Xmean(평균)
+     standardization = ────────────────
+                         Xstd(표준편차
+             위의 식을 써도 되지만 라이브러리를 주로 씀(sklearn.preprocessing.StandardScaler 이용)

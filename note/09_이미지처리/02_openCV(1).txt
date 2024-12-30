@@ -1,0 +1,31 @@
+IMREAD FLAGS : 
+  IMREAD_UNCHANGED   -1    설정된경우로드된이미지를그대로 (알파채널이있는경우자르기) 반환 EXIF 방향을무시.
+  IMREAD_GRAYSCALE     0     설정하면 항상 이미지를 단일채널 회색조 이미지로 변환(코덱 내부 변환).
+  IMREAD_COLOR           1     설정된 경우 항상 이미지를 3채널 BGR 컬러이미지로 변환.
+  IMREAD_ANYDEPTH      2     설정된 경우 입력에 해당 깊이가 있으면 16비트/ 32비트 이미지를 반환하고, 그렇지 않으면 8비트로 변환.
+  IMREAD_ANYCOLOR      4     설정된 경우 이미지를 가능한 모든 색상 형식으로 읽음.
+  IMREAD_LOAD_GDAL     8     설정되어 있으면 gdal드라이버를 사용하여 이미지를 로드.
+  IMREAD_REDUCED_GRAYSCALE_2     16     설정하면 항상 이미지를 단일채널 회색조이미지로 변환하고 이미지크기를 1/2로 줄임.
+  IMREAD_REDUCED_COLOR_2     17     설정하면 항상 이미지를 3채널 BGR 컬러이미지로 변환하고 이미지크기를 1/2로 줄임.
+  IMREAD_REDUCED_GRAYSCALE_4     32     설정하면 항상 이미지를 단일채널 회색조이미지로 변환하고 이미지크기를 1/4로 줄임.
+  IMREAD_REDUCED_COLOR_4     33     설정하면 항상 이미지를 3채널 BGR컬러이미지로 변환하고 이미지크기를 1/4로 줄임.
+  IMREAD_REDUCED_GRAYSCALE_8     64     설정하면 항상 이미지를 단일채널 회색조이미지로 변환하고 이미지크기가 1/8로 줄임.
+  IMREAD_REDUCED_COLOR_8     65     설정하면 항상 이미지를 3채널 BGR컬러이미지로 변환하고 이미지크기를 1/8로 줄임.
+  IMREAD_IGNORE_ORIENTATION     128     설정된 경우 EXIF의방향플래그에 따라 이미지를 회전시키지 않는다.
+선 그리기 : cv2.line(img, start, end, color, thickness=1)
+  img - 도형을 그릴 이미지 객체
+  start - 선의 시작 좌표 (x, y)형식으로 지정
+  end - 선의 끝 좌표 (x, y)형식으로 지정
+  color - BGR 형식의 색상값 (B, G, R) 형식
+  thickness - 선의 두께를 픽셀 단위 정수로 지정
+사각형 그리기 : cv2.rectangle(img, start, end, color, thickness=1)
+  thickness - 선의 두께를 픽셀 단위 정수로 지정 -1이면 사각형 안쪽을 채우기
+원 그리기 : cv2.circle(img, start, end, color, thickness=1)
+  thickness - 선의 두께를 픽셀 단위 정수로 지정 -1이면 원의 안쪽을 채우기
+타원과 호 그리기 : cv2ellipse(img, center, axes, angle, startAngle, endAngle, color, thickness=1)
+  center - 타원의 중심 좌표 (x, y)형식으로 지정
+  axes - 타원의 중심에서 가장 큰 거리와 작은 거리를 픽셀 단위 정수로 지정 (max, min) 형식으로 지정
+  angle - 타원의 기울기 각도
+  startAngle - 호의 시작 각도 
+  endAngle - 호의 끝 각도
+  thickness - 선의 두께를 픽셀 단위 정수로 지정 -1이면 타원의 안쪽을 채우기
