@@ -1,0 +1,31 @@
+선 그리기 : cv2.line(img, start, end, color, thickness=1)
+  img - 도형을 그릴 이미지 객체
+  start - 선의 시작 좌표 (x, y)형식으로 지정
+  end - 선의 끝 좌표 (x, y)형식으로 지정
+  color - BGR 형식의 색상값 (B, G, R) 형식
+  thickness - 선의 두께를 픽셀 단위 정수로 지정
+사각형 그리기 : cv2.rectangle(img, start, end, color, thickness=1)
+  thickness - 선의 두께를 픽셀 단위 정수로 지정 -1이면 사각형 안쪽을 채우기
+원 그리기 : cv2.circle(img, start, end, color, thickness=1)
+  thickness - 선의 두께를 픽셀 단위 정수로 지정 -1이면 원의 안쪽을 채우기
+타원과 호 그리기 : cv2ellipse(img, center, axes, angle, startAngle, endAngle, color, thickness=1)
+  center - 타원의 중심 좌표 (x, y)형식으로 지정
+  axes - 타원의 중심에서 가장 큰 거리와 작은 거리를 픽셀 단위 정수로 지정 (max, min) 형식으로 지정
+  angle - 타원의 기울기 각도
+  startAngle - 호의 시작 각도 
+  endAngle - 호의 끝 각도
+  thickness - 선의 두께를 픽셀 단위 정수로 지정 -1이면 타원의 안쪽을 채우기
+다각형 그리기 : cv2.polylines(img, points, isClosed, color, thickness)
+  points - 다각형 꼭지점 좌표 [[x1, y1], [x2, y2]] 형식으로 지정
+  isClosed - True면 닫힌 도형
+  thickness - 선의 두께를 픽셀 단위 정수로 지정 기본값은 1 음수는 사용불가
+문자열 표시하기 : cv2.putText(img, text, org, font, fontScale, color)
+  text - 표시할 문자열
+  org - 문자열이 표시될 위치 (왼쪽 아래 모서리 지점이 기준)
+  font - 폰트 지정 cv2.FONT_xxx 형식 속성으로 지정
+  fontScale - 폰트 크기 지정
+이미지 합치기
+  OpenCV의 cv2.add() : Saturation 연산 
+    Saturation연산은 한계값을 정하고 그 값을 벗어나는경우는 모두 특정값으로 계산하는 방식. 이미지에서는 0 이하는 모두0, 255 이상은 모두 255로 표현.
+  Numpy : Modulo 연산 
+    Modulo연산은 ‘a와 b는 n으로 나눈나머지값이같다’ 라는 의미. 이미지에서 연산의결과가 256보다 큰경우는256으로 나눈나머지 값으로 결정.
