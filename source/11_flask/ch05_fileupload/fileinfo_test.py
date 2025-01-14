@@ -8,10 +8,11 @@ def stamp2real(stamp):
 
 def info(filename):
     '파일 생성시간, 마지막 수정시간, 마지막 엑세스 시간, 파일 사이즈를 return'
+    # 프로젝트 기준으로 업로드 파일 경로 작성
     ctime = os.path.getctime(filename)
     mtime = os.path.getmtime(filename)
     atime = os.path.getatime(filename)
-    size = os.path.getsize((filename))
+    size = os.path.getsize(filename)
     return ctime, mtime, atime, size
 
 # print(stamp2real(1736734915.62))

@@ -10,7 +10,9 @@
         <img src="{{ url_for('static', filename='img/upload.png')}}"
               width="100">
         <form action="/" method="post" enctype="multipart/form-data"> <!-- enctype="multipart/form-data"은 꼭 사용해줘야 파일 첨부가 가능 -->
-          <input type="file" name="file">
+<!--          <input type="file" name="file">-->
+          {{ form.csrf_token() }} <!-- 동적웹크롤링으로 파일을 업로드 하는것을 방지 -->
+          {{ form.files() }}
           <input type="submit" class="btn btn-primary btn-lg">
         </form>
       </div>
