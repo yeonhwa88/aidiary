@@ -60,5 +60,16 @@ def main_page():
                            form=form,
                            infos=infos)
 
+@app.route('/download/<filename>')
+def download_file(filename):
+    return send_file('upload/'+filename,
+                     as_attachment=True) # 파일이 브라우저에서 열리지 않고 다운로드만 진행
+
+@app.route('/del/<filename>')
+def del_file(filename):
+    os.remove('upload/'+filename)
+    # return redirect(url_for('main_page')) # url을 만들어줘서 main_page로 다시 실행 = '/' 요청경로
+    return redirect('/')
+
 if __name__ == '__main__':
     app.run(debug=True)
