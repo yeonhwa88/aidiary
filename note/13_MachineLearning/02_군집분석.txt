@@ -1,0 +1,32 @@
+군집 분석(Clustering)이란?
+    데이터 내 유사한 속성을 가진 객체들을 그룹으로 묶는 기법.
+    지도학습과 달리 정답(Label)이 없는 비지도학습(Unsupervised Learning) 방식.
+    사용 예: 고객 세분화, 이상 탐지(Anomaly Detection), 이미지 분할 등.
+군집 분석 기법의 종류
+    K-Means 클러스터링: 가장 대표적인 군집 알고리즘.
+    계층적 클러스터링(Hierarchical Clustering): 덴드로그램(Dendrogram) 기반 군집화.
+    DBSCAN 클러스터링: 밀도(Density) 기반 클러스터링.
+K-Means 클러스터링
+    군집의 개수(K)를 미리 정해야 함.
+    각 데이터 포인트를 가장 가까운 중심(Centroid)으로 할당하고 반복적으로 업데이트.
+    sklearn.cluster.KMeans를 사용해 구현 가능.
+K-Means의 한계
+    이상치(Outlier)에 민감함.
+    군집 크기(Size)와 밀도(Density)가 다르면 잘못된 결과를 초래할 수 있음.
+    데이터가 원형(Globular)이 아닐 경우 적절하지 않을 수 있음.
+계층적 클러스터링 (Hierarchical Clustering)
+    군집 간의 거리 기반으로 계층적으로 묶어가는 방식.
+    군집 개수를 미리 정할 필요가 없음.
+    dendrogram을 활용해 적절한 클러스터 개수를 찾음.
+    DBSCAN (Density-Based Spatial Clustering of Applications with Noise)
+    밀도를 기준으로 군집을 형성하며, 이상치를 자동으로 제거할 수 있음.
+    데이터의 밀도가 균일하지 않을 경우에도 효과적.
+    sklearn.cluster.DBSCAN으로 구현 가능.
+군집 분석 성능 평가
+    실루엣 계수(Silhouette Score): 군집 내 응집도와 군집 간 분리도를 측정.
+    Rand Index (RI): 예측된 군집과 실제 레이블이 얼마나 일치하는지 평가.
+    Mutual Information (MI): 군집 간 정보 공유 정도를 측정.
+    Homogeneity & Completeness & V-Measure: 군집 내 동일 클래스 데이터 비율 평가.
+실루엣 계수
+    silhouette_score()를 사용하여 모든 데이터 포인트의 평균 실루엣 계수를 계산.
+    클러스터가 잘 형성될수록 1에 가까운 값을 가짐.

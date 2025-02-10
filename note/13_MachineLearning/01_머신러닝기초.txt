@@ -1,0 +1,24 @@
+머신러닝 목표 
+    Insight(탐색적 데이터 분석, EDA): 데이터의 특징과 패턴을 이해하기 위한 과정.
+    Optimization(최적화): 더 좋은 예측을 위해 데이터 전처리, 파생 변수 생성, 모델 선택 등을 수행.
+지도학습 vs. 비지도학습
+    지도학습(Supervised Learning): 입력(X)과 정답(Y)이 주어진 상태에서 학습하는 방식.
+    분류(Classification): 데이터가 특정 카테고리(라벨)로 분류됨 (예: 스팸 메일 분류).
+    회귀(Regression): 연속적인 값을 예측하는 문제 (예: 집값 예측).
+    비지도학습(Unsupervised Learning): 정답 없이 데이터에서 패턴을 찾아냄.
+    클러스터링(Clustering): 비슷한 데이터끼리 그룹화 (예: 고객 세분화).
+    차원 축소(Dimensionality Reduction): 데이터의 중요한 특징만 남기는 기법 (예: PCA).
+
+Numpy & Pandas : 데이터 로딩, 변환, 정리
+Matplotlib & Seaborn : 데이터 시각화
+결측치 처리: 평균, 중앙값, 최빈값 등으로 대체 (SimpleImputer).
+정규화/표준화: 데이터 크기를 조정하여 모델 학습을 원활하게 함 (MinMaxScaler, StandardScaler).
+원-핫 인코딩(One-Hot Encoding): 범주형 변수를 숫자로 변환하여 모델이 이해할 수 있도록 변환 (pd.get_dummies()).
+train_test_split() 함수를 이용해 랜덤하게 train, test 데이터 분리
+
+Scikit-learn
+    분류(Classification): 결정 트리(Decision Tree), 랜덤 포레스트(Random Forest), SVM(Support Vector Machine), 로지스틱 회귀(Logistic Regression) 등.
+    회귀(Regression): 선형 회귀(Linear Regression), 랜덤 포레스트 회귀(Random Forest Regressor), 다항 회귀(Polynomial Regression) 등.
+모델 평가 방법
+    분류 문제: 정확도(Accuracy), 정밀도(Precision), 재현율(Recall), F1-score 사용.
+    회귀 문제: 평균제곱오차(MSE), 평균절대오차(MAE), 결정계수(R²) 사용.

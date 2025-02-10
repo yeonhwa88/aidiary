@@ -1,0 +1,23 @@
+분류 분석 개요
+    데이터의 속성을 활용하여 특정 카테고리(클래스)로 분류하는 과정.
+**지도학습(Supervised Learning)**에 속하며, 대표적인 예로 손글씨 숫자 인식(MNIST), 붓꽃(Iris) 분류, 와인 등급 분류 등이 있음.
+분류 모형의 종류
+    확률적 모형: 조건부 확률을 계산하여 분류 (예: 나이브 베이즈(Naive Bayes), QDA)
+    판별 함수 기반 모형: 경계선을 정의하여 분류 (예: 로지스틱 회귀(Logistic Regression), 서포트 벡터 머신(SVM))
+    트리 기반 모델: 데이터를 분할하여 분류 (예: 의사결정나무(Decision Tree), 랜덤 포레스트(Random Forest))
+    신경망 기반 모델: 뉴런을 활용한 딥러닝 방식 (예: MLPClassifier, DNN)
+확률적 생성 모형 vs. 판별 모형
+    생성 모형: 데이터를 특정 클래스에 속하는 확률을 추정 후 베이즈 정리 적용 (예: QDA, Naive Bayes)
+    판별 모형: 특정 데이터가 어느 클래스에 속할 가능성이 높은지 직접 학습 (예: 로지스틱 회귀, 의사결정나무)
+주요 알고리즘
+    로지스틱 회귀(Logistic Regression): 이진 분류 문제에서 사용되는 대표적인 모델.
+    의사결정나무(Decision Tree): 데이터를 여러 개의 규칙으로 분할하여 예측.
+    퍼셉트론(Perceptron): 가장 단순한 신경망 모델로, 직선(Linear)으로 분류 가능한 문제에 적합.
+    SVM(Support Vector Machine): 초평면(Hyperplane)을 통해 분류.
+    인공신경망(Neural Network, MLPClassifier): 여러 층을 활용한 분류 방식.
+성능 평가 방법
+    정확도(Accuracy): 전체 데이터 중 올바르게 분류된 비율.
+    정밀도(Precision): 모델이 **긍정(Positive)**으로 예측한 것 중 실제로 맞은 비율.
+    재현율(Recall, Sensitivity): 실제 **긍정(Positive)**인 데이터 중 올바르게 예측된 비율.
+    F1-score: 정밀도와 재현율의 조화 평균으로, 모델 성능을 한 수치로 표현.
+    ROC 커브 & AUC(Area Under Curve): 이진 분류에서 성능을 평가하는 그래프.

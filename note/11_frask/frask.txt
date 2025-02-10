@@ -1,18 +1,23 @@
-- GET, POST 차이
-     1. GET 요청 (데이터 조회)
-         클라이언트에서 서버로 데이터를 요청할 때 사용.
-         주로 쿼리 매개변수(Query Parameters) 또는 **경로 매개변수(Path Parameters)**를 통해 데이터를 전달.
-         URL을 통해 데이터를 보내므로 보안이 취약하고, 요청 크기에 제한이 있음.
-     2. POST 요청 (데이터 전송 및 저장)
-         클라이언트가 서버에 데이터를 전송하고 저장할 때 사용.
-         요청 본문(Body)에 데이터를 담아 전송하며, 보안성이 높고 데이터 크기 제한이 적음.
-         pydantic 모델을 이용해 데이터 검증 가능.
-- Jinja2 (템플릿 렌더링)
-     HTML 파일을 동적으로 생성하는 템플릿 엔진.
-     Templates 클래스를 사용하여 FastAPI에서 HTML 페이지 렌더링 가능.
-- 파일 업로드
-     UploadFile을 사용하여 파일을 업로드 및 처리.
-     비동기 처리를 지원하여 대용량 파일도 효율적으로 업로드 가능.
-- 데이터베이스(DB) 연결
-     SQLAlchemy, SQLModel 등을 사용하여 데이터베이스 연동.
-     비동기 데이터베이스 드라이버(asyncpg 등)와 함께 사용할 수 있음.
+GET (@app.route("/items/<int:item_id>", methods=["GET"]))
+    클라이언트가 서버에서 데이터를 조회할 때 사용.
+    URL에 데이터를 포함하여 요청 (/items/123).
+    보안이 취약하고 요청 크기 제한이 있음.
+POST (@app.route("/items/", methods=["POST"]))
+    클라이언트가 데이터를 서버에 전송 및 저장할 때 사용.
+    요청 본문(Body)에 데이터를 포함하여 보안성이 높음.
+    Flask에서는 request.json을 사용하여 데이터 처리.
+Jinja2 (템플릿 렌더링)
+    GET (@app.route("/home/", methods=["GET"]))
+    Flask에서 기본적으로 Jinja2를 지원.
+    render_template("index.html")을 사용하여 HTML 페이지 렌더링 가능.
+파일 업로드
+    POST (@app.route("/upload/", methods=["POST"]))
+    request.files["file"]을 사용하여 파일 업로드 가능.
+    업로드된 파일을 서버에 저장하거나 처리 가능.
+파일 삭제
+    DELETE (@app.route("/delete/<file_name>", methods=["DELETE"]))
+    특정 파일을 서버에서 삭제할 때 사용.
+    os.remove(file_name)을 활용하여 파일 삭제 가능.
+    데이터베이스(DB) 연결
+SQLAlchemy를 사용하여 DB 연동.
+flask_sqlalchemy 패키지를 활용하여 관계형 데이터베이스와 연결 가능.

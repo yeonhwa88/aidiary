@@ -1,0 +1,25 @@
+변수 선택과 차원 축소
+    머신러닝 모델 성능 향상을 위해 불필요한 변수 제거 및 차원 축소(PCA) 활용.
+    SelectKBest를 사용해 가장 중요한 변수 선택 가능.
+    feature_importance_ 속성을 통해 독립변수의 중요도를 평가함.
+파라미터 탐색 (Hyperparameter Tuning)
+    모델 성능 향상을 위해 하이퍼파라미터 최적화 수행.
+    GridSearchCV: 다양한 하이퍼파라미터 조합을 평가하여 최적값 탐색.
+    validation_curve(): 단일 하이퍼파라미터에 대한 성능 평가.
+자료 불균형 처리
+    불균형 데이터 문제 해결을 위해 오버샘플링(SMOTE) 및 언더샘플링 적용.
+    class_weight='balanced' 옵션을 활용하여 가중치 조정 가능.
+앙상블 학습 (Ensemble Learning)
+    여러 개의 머신러닝 모델을 결합하여 성능 향상.
+    주요 기법: 배깅(Bagging), 부스팅(Boosting), 투표(Voting).
+배깅 (Bagging)
+    여러 개의 **의사결정나무(Decision Tree)**를 결합하여 과적합 방지.
+    대표 모델: 랜덤 포레스트(Random Forest).
+부스팅 (Boosting)
+    순차적으로 모델을 학습하며 오차를 보정하는 방식.
+    대표 모델: AdaBoost, Gradient Boosting, XGBoost, LightGBM.
+        XGBoost는 과적합 방지 기능 포함, LightGBM은 속도가 더 빠름.
+투표 기반 앙상블 (Voting Classifier)
+    여러 개의 모델을 결합하여 최종 예측 수행.
+    hard voting: 다수결 방식
+    soft voting: 확률 값 기반 예측.

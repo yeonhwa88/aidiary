@@ -1,0 +1,15 @@
+FastAPI : 비동기를 기본으로 지원, 파이썬 웹 프레임워크
+파일 업로드
+    POST (@app.post("/put,patch/"))
+        UploadFile을 사용하여 파일 업로드 가능.
+        비동기 처리를 지원하여 대용량 파일 업로드 가능.
+파일 삭제
+    DELETE (@app.delete("/delete/{file_name}"))
+        특정 파일을 서버에서 삭제할 때 사용.
+        경로 매개변수(file_name)를 이용하여 삭제할 파일 지정.
+Jinja2 (템플릿 렌더링)
+      GET (@app.get("/home/"))
+         Templates 클래스를 활용하여 FastAPI에서 HTML 페이지 렌더링 가능.
+DB 연동
+SQLAlchemy, SQLModel을 사용하여 DB 연동.
+async  비동기 지원.

@@ -14,7 +14,7 @@ app.mount('/static',
           StaticFiles(directory=os.path.join(BASE_DIR, '../static')),
           name='static')
 templates = Jinja2Templates(directory=os.path.join(BASE_DIR, '../templates'))
-# 데코레이션 C,(post),R(get),U(put,patch),D(delete)
+# 데코레이션 C(post),R(get),U(put,patch),D(delete)
 @app.get('/')
 @app.get('/todos')
 async def get_todos_handler(request:Request):
