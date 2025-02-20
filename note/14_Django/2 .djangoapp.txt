@@ -1,0 +1,36 @@
+Django 프로젝트 생성
+  django-admin startproject myproject . 명령어로 프로젝트 생성.
+  manage.py는 프로젝트 관리를 위한 실행 파일.
+  settings.py에서 프로젝트 환경설정 가능.
+App 생성 및 등록
+  python manage.py startapp app_name으로 앱 생성.
+  settings.py의 INSTALLED_APPS에 추가하여 등록.
+Model (데이터베이스 관리)
+  Django ORM을 사용하여 모델 정의 (models.py에서 설정).
+  python manage.py makemigrations → 변경사항 저장.
+  python manage.py migrate → 데이터베이스 반영.
+View 및 URL 설정
+  views.py에서 요청을 처리하는 함수(혹은 클래스) 작성.
+  urls.py에서 path() 또는 re_path()를 사용하여 URL 매핑.
+Template 사용
+  HTML 파일을 템플릿으로 활용 (templates/ 디렉토리 사용).
+  {% load static %}, {% url 'name' %} 같은 Django 템플릿 태그 사용 가능.
+Form 처리 및 CSRF 보호
+  Django의 forms.py를 활용하여 폼 데이터를 쉽게 처리.
+  CSRF 공격 방지를 위해 {% csrf_token %} 추가 필수.
+Admin 페이지 설정
+  python manage.py createsuperuser로 관리자 계정 생성.
+  admin.py에서 모델을 등록하면 Django Admin 페이지에서 관리 가능.
+데이터 조회 및 필터링
+  Model.objects.all(), filter(), order_by(), get() 등을 활용한 데이터 조회.
+  Q 객체를 사용하면 복잡한 조건 검색 가능.
+JSON 응답 처리
+  JsonResponse()를 사용하여 JSON 데이터 반환 가능.
+파일 다운로드
+  HttpResponse와 pandas를 활용하여 CSV/Excel 파일 다운로드 구현.
+Redirect 처리
+  redirect() 함수로 페이지 이동 가능 (redirect('/blog/')).
+Django Debug Toolbar
+  pip install django-debug-toolbar 설치 후 디버깅 가능.
+Django Shell 활용
+  python manage.py shell에서 ORM을 활용하여 데이터 직접 조작.
