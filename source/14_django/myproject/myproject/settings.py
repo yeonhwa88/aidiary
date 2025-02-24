@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/5.1/ref/settings/
 """
 
 from pathlib import Path
+import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -19,8 +20,8 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/5.1/howto/deployment/checklist/
 
-from decouple import config
 # SECURITY WARNING: keep the secret key used in production secret!
+from decouple import config
 SECRET_KEY = config('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
@@ -38,9 +39,11 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
-    "django_extensions", # 추가 앱 등록 (shell_plus 사용하기 위함 model들 자동 import)
+    "django_extensions", # 추가 앱 등록(shell_plus 사용하기 위함 model들 자동 import)
     "blog", # 앱등록
-    "articles",  # 앱등록
+    "accounts",
+    "book",
+    "django.contrib.humanize", # intcomma filter(세자리마다 ,) 사용하기 위함
 ]
 
 MIDDLEWARE = [
@@ -58,7 +61,7 @@ ROOT_URLCONF = "myproject.urls"
 TEMPLATES = [
     {
         "BACKEND": "django.template.backends.django.DjangoTemplates",
-        "DIRS": [],
+        "DIRS": [os.path.join(BASE_DIR, 'myproject', 'templates'),], # templates 여기도 있다 라는 표시
         "APP_DIRS": True,
         "OPTIONS": {
             "context_processors": [
@@ -114,7 +117,6 @@ TIME_ZONE = "Asia/Seoul"
 USE_I18N = True
 
 USE_TZ = False
-
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.1/howto/static-files/
