@@ -4,7 +4,7 @@
 
 
 # 교육이수 기술 내역서
-![기술내역서](https://github.com/user-attachments/assets/a2dc3511-a7fe-4d8b-8c48-d885d0a92daa)d)
+![기술내역서](https://github.com/user-attachments/assets/a2dc3511-a7fe-4d8b-8c48-d885d0a92daa))
 
 
 # 📚 SKIL
