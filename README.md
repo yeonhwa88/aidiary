@@ -1,7 +1,7 @@
 # (산대특) 스마트 팩토리 혁신을 위한 AI 솔루션 개발 양성과정을 위한 공유 자료실
 
 # 교육이수 기술 내역서
-![교육이수내역서](https://github.com/user-attachments/assets/04d6bc39-c1d5-4967-ab29-4ff1f1d74326)
+![교육이수기술내역서](https://github.com/user-attachments/assets/d1b377be-22ad-449e-93f4-c3edec5679c0)
 
 # 📚 SKIL
  ### Programming
