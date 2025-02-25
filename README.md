@@ -1,7 +1,5 @@
 # (산대특) 스마트 팩토리 혁신을 위한 AI 솔루션 개발 양성과정을 위한 공유 자료실
 
-방문해 주셔서 감사합니다.
-
 
 # 교육이수 기술 내역서
 ![기술내역서](https://github.com/user-attachments/assets/a2dc3511-a7fe-4d8b-8c48-d885d0a92daa))
