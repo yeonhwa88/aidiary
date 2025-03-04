@@ -11,7 +11,7 @@ from django.views.generic import DeleteView
 book_list = ListView.as_view(model=Book)
 # def book_list(request):
 #   return render(request,
-#                 'article/book_list.html',
+#                 'article/article_list.html',
 #                 {'book_list':Book.objects.all()})
 class BookCreateView(CreateView):
   model = Book
@@ -44,7 +44,7 @@ book_new = BookCreateView.as_view()
 #     #form = BookForm()
 #     form = BookModelForm()
 #   return render(request,
-#                   'article/book_form.html',
+#                   'article/article_form.html',
 #                   {'form':form })
 book_edit = UpdateView.as_view(model=Book,
                  fields=['title', 'author', 'publisher', 'sales'])
@@ -62,7 +62,7 @@ book_edit = UpdateView.as_view(model=Book,
 #   else:
 #     form = BookModelForm(instance=article)
 #   return render(request,
-#                   'article/book_form.html',
+#                   'article/article_form.html',
 #                   {'form':form})
 book_delete = DeleteView.as_view(model=Book,
                      # success_url="/article"
@@ -75,16 +75,5 @@ book_delete = DeleteView.as_view(model=Book,
 #     return redirect(article)
 #   else:
 #     return render(request,
-#            'article/book_confirm_delete.html',
+#            'article/article_confirm_delete.html',
 #            {'object':article})
-
-
-
-
-
-
-
-
-
-
-
